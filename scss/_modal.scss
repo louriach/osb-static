@@ -34,17 +34,16 @@
     outline: 0;
 
     .modal-content {
-        @media all and (min-width: 768px) {
-            -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-            background-color: $white;
-            padding: 1rem;
-        }
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        background-color: $white;
+        margin: 2rem auto;
+        padding: 1rem;
+        width: 95%;
     }
     @media (min-width:768px) {
         .modal-dialog {
             width: 40rem;
-            margin: 2rem auto;
         }
         .modal-sm {
             width: 300px
