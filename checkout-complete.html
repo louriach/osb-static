@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="">
+  <meta name="author" content="">
+  <title>OneStepBooking.com</title>
+  <link href="css/checkout.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/currency-dropdown.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header header--trim">
+        <nav class="[ relative z--1 ] navbar">
+          <div class="container">
+            <div class="navbar-header">
+              <div class="navbar-brand">
+                <a href="#" class="d--inline-block logo">
+                    OneStepBooking.com
+                  </a>
+                <div id="currency"></div>
+              </div>
+              <button type="button" class="[ button button--outline ] navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+              </button>
+            </div>
+            <div id="navbar" class="[ navbar-collapse collapse ]">
+              <ul class="list--none menu-list">
+                <li>
+                  <a href="#" class="text--uppercase link__border link__border link__border nav__item">Our airlines</a>
+                </li>
+                <li>
+                  <a href="#" class="text--uppercase link__border nav__item">Get in touch</a>
+                </li>
+                <li>
+                  <a href="#" class="text--uppercase link__border link__border nav__item">About us</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="text--uppercase relative link__border nav__item dropdown-toggle" data-toggle="dropdown" role="button"
+                    aria-haspopup="true" aria-expanded="false">
+                      Your booking
+                    </a>
+                  <ul class="list--none [ dropdown-menu pull-right ] background--white">
+                    <li>
+                      <a href="#" class="text--uppercase [ pb--1 pt--1 ]">Action</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text--uppercase [ pb--1 pt--1 ]">Another action</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text--white">
+          <h1 class="h2 mb--0 page-title">Your booking has been successful</h1>
+          </div>
+        </div>
+      </div>       
+    <div class="cover"></div> 
+  </header>
+
+  <section class="mb--3">
+    <div class="container">
+      <div class="row">
+        <div class="mb--2 col-sm-12 col-md-8 col-md-push-2">
+        <h2>Order summary</h2>
+        <div class="form-wrap col-sm-12 col-md-6">
+        <p><strong>Outbound</strong></p>
+        <table class="w--100 mb--2 table--padded">
+          <tbody>
+            <tr>
+              <td>
+                Airline:
+              </td>
+              <td>
+                  <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--easyjet.png" alt="" class="airline-logo" title="easyJet">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Passengers:
+              </td>
+              <td>
+                2 adults, 1 child
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Departing:
+              </td>
+              <td>
+                  23:50 <abbr title="London Gatwick">LGW</abbr>, 24/01/2017
+              </td>
+            </tr>
+            <tr>
+                <td>
+                  Arriving:
+                </td>
+                <td>
+                    01:10 <abbr title="Barcelona">BCN</abbr>, <span class="highlight" title="Flight arrives the next day">25</span>/01/2017
+                </td>
+              </tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="form-wrap col-sm-12 col-md-6">
+        <p><strong>Inbound</strong></p>
+        <table class="w--100 table--padded">
+          <tbody>
+              <tr>
+                <td>
+                  Airline:
+                </td>
+                <td>
+                    <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--easyjet.png" alt="" class="airline-logo" title="easyJet">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Passengers:
+                </td>
+                <td>
+                  2 adults, 1 child
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Departing:
+                </td>
+                <td>
+                    08:50 <abbr title="Barcelona">BCN</abbr>, 24/01/2017
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Arriving:
+                </td>
+                <td>
+                    10:55 <abbr title="London Stansted"><span class="highlight" title="Returns to a different airport">STN</span></abbr>, 25/01/2017
+                </td>
+              </tr>
+            </tbody>
+          </table> 
+          </div>
+        </div>      
+        </div>
+      </div>
+  </section>
+
+  <footer class="background--dark-grey footer">
+      <div class="container">
+        <div class="row">
+          <div class="[ text--center text--white small ] [ pb--3 pt--3 ] col-md-12">
+            <div class="mb--3">
+              <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--white.svg">
+            </div>
+            <ul class="list--none list--inline">
+              <li>
+                <a href="#" class="text--white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text--white">Contact Us</a>
+              </li>
+              <li>
+                <a href="#" class="text--white">Booking Conditions</a>
+              </li>
+              <li>
+                <a href="#" class="text--white">Privacy Policy</a>
+              </li>
+            </ul>
+            <p>OneStepBooking.com is a trading name of BF Aviation Ltd, a limited company incorporated in England and Wales under
+              registration number 08615973, whose registered office is at 16 Beaufort Court, Admirals Way, Docklands, London,
+              E14 9XL.</p>
+            <div class="copyright">
+              © OneStepBooking.com All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      //Dropdown plugin data
+      var ddData = [{
+          text: "<span class='flag-icon flag-icon-us'></span> USD",
+          value: 1,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-gb'></span> GBP",
+          value: 2,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-au'></span> AUD",
+          value: 3,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-us'></span> USD",
+          value: 4,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-gb'></span> GBP",
+          value: 5,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-au'></span> AUD",
+          value: 6,
+          selected: false,
+        }
+      ];
+
+      $('#currency').mouseenter(function (event) {
+        $('body').css('overflow', 'hidden');
+      }).mouseleave(function (event) {
+        $('body').css('overflow', '');
+      });
+
+    });
+  </script>  
+
+</body>
+
+</html>

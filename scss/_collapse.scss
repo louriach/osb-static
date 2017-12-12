@@ -1,0 +1,26 @@
+.collapse--toggle {
+    background: url(https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--minus.svg) no-repeat 0 0 transparent;
+    &.collapsed {
+        background: url(https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plus.svg) no-repeat 0 0 transparent;
+    }
+    @media all and (max-width: 768px) {
+        padding-bottom: $base-rem;
+    }
+    padding-left: calc(#{$base-rem}*3);
+    transition: all ease .3s;
+}
+
+.filter--toggle {
+    @media all and (max-width: 992px) {
+        background-color: $orange;
+        bottom: $base-rem;
+        border-radius: 3px;
+        color: $white;
+        left: $base-rem__desktop;
+        padding: 1rem;
+        position: fixed;
+        right: $base-rem__desktop;
+        text-align: center;
+        z-index: 2;
+    }
+}

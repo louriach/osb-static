@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="">
+  <meta name="author" content="">
+  <title>OneStepBooking.com</title>
+  <link href="css/search-results.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Logo slider -->
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <!-- Checkbox toggle switch -->
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  <!-- Include Bootstrap Datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+  <!-- Include awesomeplete autocomlete plugin for airports -->
+  <script src="https://leaverou.github.io/awesomplete/awesomplete.js"></script>
+  <!-- Currency dropdown -->
+  <script type="text/javascript" src="js/currency-dropdown.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Range slider -->
+  <script type="text/javascript" src="https://refreshless.com/noUiSlider/distribute/nouislider.js?v=1000"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+</head>
+
+<body class="search">
+    <header class="header header--trim">
+        <nav class="[ relative z--1 ] navbar">
+          <div class="container">
+            <div class="navbar-header">
+              <div class="navbar-brand">
+                <a href="#" class="d--inline-block logo">
+                    OneStepBooking.com
+                  </a>
+                <div id="currency"></div>
+              </div>
+              <button type="button" class="[ button button--outline ] navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+              </button>
+            </div>
+            <div id="navbar" class="[ navbar-collapse collapse ]">
+              <ul class="list--none menu-list">
+                <li>
+                  <a href="#" class="text--uppercase link__border link__border link__border nav__item">Our airlines</a>
+                </li>
+                <li>
+                  <a href="#" class="text--uppercase link__border nav__item">Get in touch</a>
+                </li>
+                <li>
+                  <a href="#" class="text--uppercase link__border link__border nav__item">About us</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="text--uppercase relative link__border nav__item dropdown-toggle" data-toggle="dropdown" role="button"
+                    aria-haspopup="true" aria-expanded="false">
+                      Your booking
+                    </a>
+                  <ul class="list--none [ dropdown-menu pull-right ] background--white">
+                    <li>
+                      <a href="#" class="text--uppercase [ pb--1 pt--1 ]">Action</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text--uppercase [ pb--1 pt--1 ]">Another action</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text--white">
+              <h1 class="h2 mb--0 page-title">Privacy policy</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+
+  <section class="mb--3">
+    <div class="container">
+      <div class="row">
+        <div class="[ col-md-9 col-md-push-3 ]">
+          <h2>Finding the best airline to get you to and from your dream destination</h2>
+          <p>
+            Air travel has changed immeasurable over the past two decades. There are now so many more considerations when choosing your
+            airline, not least because of the rise of the no-frills carriers - a boom which was started by Ryanair, which
+            was founded in 1985 but didn't really take off (if you excuse the pun) until the deregulation of the airline
+            industry by the EU in 1992.
+          </p>
+          <p>
+            The Irish airline was quickly followed by the second most popular low cost airline, Easyjet, in 1995. The model of charging
+            for extras was gradually adopted by other airlines with many of the traditional airlines such as British Airways
+            now only offering inclusive meals and baggage on long-haul flights.
+          </p>
+          <p>
+            The traditional charter airlines operated by travel companies such as Thomson and Thomas Cook also entered the budget airline
+            market by offering flight only tickets and adopting the same chargeable extras which now extend to things like
+            priority boarding.
+          </p>
+          <p>
+            Ryanair is now Europe's second largest airline group after Lufthansa, but the rest of the top ten of the world's biggest
+            airlines is dominated by US carriers (the top 4) and China (3 of the 10), with the merged Air France-KLM company
+            the only other one to get a look-in, occupying eighth place below Ryanair in seventh.
+          </p>
+          <h2>Travel beyond Europe or within the UK</h2>
+          <p>
+            The biggest UK airline offering travel beyond short haul options is British Airways. This flagship carrier provides worldwide
+            flights to far-flung countries such as New Zealand, Australia, the USA and the Caribbean.
+          </p>
+          <p>
+            Many UK airlines also offer some flights between destinations closer to home. Regional UK airports are connected by domestic
+            flights which can be cheaper than travelling by rail or car. You can search for a wide range of great value flights,
+            both international and domestic, using this website's search facility.
+          </p>
+
+        </div>
+        <div class="sidebar-search [ col-md-3 col-md-pull-9 ]">
+          <form>
+            <fieldset>
+              <legend class="mb--2">Search for flights</legend>
+              <div class="mb--1 col-md-12 p--0">
+                <label class="d--block mb--1 small" for="flight-from">Travelling from</label>
+                <input type="text" id="flight-from" name="flight-from" placeholder="From" value="London (LGW)" class="input--border small w--100">
+              </div>
+              <div class="mb--1 col-md-12 p--0">
+                <label class="d--block mb--1 small" for="flight-to">Travelling to</label>
+                <input type="text" id="flight-to" name="flight-to" placeholder="To" value="Barcelona (BCN)" class="input--border small w--100">
+              </div>
+              <div class="[ col-xs-9 col-sm-9 col-md-8 ] mb--1 p--0 pr--1">
+                <label class="d--block mb--1 small" for="flight-departure"><span class="hidden-xs">Date</span> Departing</label>
+                <input type="text" id="flight-departure" name="daterange" placeholder="Date" value="08-09-2017" class="date-popout input--border small w--100">
+              </div>
+              <div class="[ col-xs-3 col-sm-3 col-md-4 ] mb--1 p--0 pl--1">
+                <div class="mb--1 text--center small">Return?</div>
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                  <label class="onoffswitch-label small" for="myonoffswitch">
+                      <span class="onoffswitch-inner input--border"></span>
+                      <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="mb--1 col-md-12 p--0 date-return">
+                <label class="d--block mb--1 small" for="flight-return">Returning</label>
+                <input type="text" id="flight-return" name="return-departure" placeholder="Date" value="2017-01-28" class="date-popout input--border small w--100">
+              </div>
+              <div class="mb--1 [ col-xs-6 col-sm-6 col-md-6 ] p--0 pr--1">
+                <label class="d--block mb--1 small" for="flight-passengers">Adults</label>
+                <select id="flight-passengers" name="return-passengers" placeholder="Passengers" value="" class="input--border small w--100">
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+              </select>
+              </div>
+              <div class="[ col-xs-6 col-sm-6 col-md-6 ] mb--2 p--0 pl--1">
+                <label class="d--block mb--1 small" for="flight-passenger-18">Under 18s</label>
+                <select id="flight-passengers-18" name="flight-passengers-18" placeholder="Passengers" value="" class="input--border small w--100">
+                <option value="zero">0</option>
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+              </select>
+              </div>
+              <div class="mb--3 col-md-12 p--0">
+                <button class="[ button button--orange ] small w--100">Search for flights</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <!-- amend search -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="background--dark-grey footer">
+      <div class="container">
+        <div class="row">
+          <div class="[ text--center text--white small ] [ pb--3 pt--3 ] col-md-12">
+            <div class="mb--3">
+              <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--white.svg">
+            </div>
+            <ul class="list--none list--inline">
+              <li>
+                <a href="#" class="text--white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text--white">Contact Us</a>
+              </li>
+              <li>
+                <a href="#" class="text--white">Booking Conditions</a>
+              </li>
+              <li>
+                <a href="#" class="text--white">Privacy Policy</a>
+              </li>
+            </ul>
+            <p>OneStepBooking.com is a trading name of BF Aviation Ltd, a limited company incorporated in England and Wales under
+              registration number 08615973, whose registered office is at 16 Beaufort Court, Admirals Way, Docklands, London,
+              E14 9XL.</p>
+            <div class="copyright">
+              © OneStepBooking.com All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+
+      // Slick slider - Used for logo slider
+
+      $('.regular').slick({
+        arrows: false,
+        centerMode: true,
+        centerPadding: '54px',
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 6,
+      });
+
+      // Date popout calendar
+
+      $('.date-popout')
+        .datepicker({
+          autoclose: true,
+          format: 'dd/mm/yyyy'
+        })
+
+      // Sliding checkbox on/off switch
+
+      $('.onoffswitch-checkbox')
+        .click(function () {
+          $('.search--return').toggleClass('inactive');
+        })
+
+      // Dynamic customer age select menu
+
+      $('#js-passenger-18--wrapper').hide();
+      $('#passenger-18').on('change', function () {
+        $('#js-passenger-18--wrapper').show();
+        $('#js-passenger-18--age').empty();
+        $.each(new Array(+this.value), function () {
+          $('<div />', {
+              html: '<div class="[ mb--1 p--0 ] col-xs-12"><label class="[ p--0 mt--1 ] small col-xs-4 col-sm-5">Age</label><select name="child-age" class="small col-xs-8 col-sm-7 button--outline"><option value="Age">Age</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option></select></div>'
+            })
+            .appendTo('#js-passenger-18--age').hide().slideDown(100);
+        });
+      });
+      $(".js-passenger--button").click(function () {
+        $(".form-dropdown--fields").slideUp(100);
+      });
+
+      // Form passenger dropdown toggle
+
+      $(".form-dropdown--fields").hide();
+      $(".form-dropdown--toggle").click(function () {
+        $(".form-dropdown--fields").slideToggle(100);
+      });
+      // Awesomeplete airport list
+
+      // Flight from
+
+      var input = document.getElementById("flight-from");
+      new Awesomplete(input, {
+        list: ["London Gatwick (LGW)", "London Stansted (STN)", "London Heathrow (LHR)", "Dublin (DUB)",
+          "Madrid (MAD)", "Barcelona (BCN)", "Berlin (BER)"
+        ]
+      });
+
+      // Flight to
+      var input = document.getElementById("flight-to");
+      new Awesomplete(input, {
+        list: ["London Gatwick (LGW)", "London Stansted (STN)", "London Heathrow (LHR)", "Dublin (DUB)",
+          "Madrid (MAD)", "Barcelona (BCN)", "Berlin (BER)"
+        ]
+      });
+
+      //Dropdown plugin data
+      var ddData = [{
+          text: "<span class='flag-icon flag-icon-us'></span> USD",
+          value: 1,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-gb'></span> GBP",
+          value: 2,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-au'></span> AUD",
+          value: 3,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-us'></span> USD",
+          value: 4,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-gb'></span> GBP",
+          value: 5,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-au'></span> AUD",
+          value: 6,
+          selected: false,
+        }
+      ];
+
+      $('#currency').ddslick({
+        data: ddData,
+      });
+
+      $('#currency').mouseenter(function (event) {
+        $('body').css('overflow', 'hidden');
+      }).mouseleave(function (event) {
+        $('body').css('overflow', '');
+      });
+
+      // Range slider 
+
+      var snapSlider = document.getElementById('js-slider-handles__outbound');
+
+      leftValue = document.getElementById('outbound-value-lower'),
+        rightValue = document.getElementById('outbound-value-upper');
+
+      // 0 = initial minutes from start of day
+      // 1440 = maximum minutes in a day
+      // step: 30 = amount of minutes to step by. 
+      var initialStartMinute = 0,
+        initialEndMinute = 1440,
+        step = 30;
+
+      slider = noUiSlider.create(snapSlider, {
+        start: [initialStartMinute, initialEndMinute],
+        connect: true,
+        step: step,
+        range: {
+          'min': initialStartMinute,
+          'max': initialEndMinute
+        }
+      });
+
+      var convertValuesToTime = function (values, handle) {
+        var hours = 0,
+          minutes = 0;
+
+        if (handle === 0) {
+          hours = convertToHour(values[0]);
+          minutes = convertToMinute(values[0], hours);
+          leftValue.innerHTML = formatHoursAndMinutes(hours, minutes);
+          return;
+        };
+
+        hours = convertToHour(values[1]);
+        minutes = convertToMinute(values[1], hours);
+        rightValue.innerHTML = formatHoursAndMinutes(hours, minutes);
+
+      };
+
+      var convertToHour = function (value) {
+        return Math.floor(value / 60);
+      };
+      var convertToMinute = function (value, hour) {
+        return value - hour * 60;
+      };
+      var formatHoursAndMinutes = function (hours, minutes) {
+        if (hours.toString().length == 1) hours = '0' + hours;
+        if (minutes.toString().length == 1) minutes = '0' + minutes;
+        return hours + ':' + minutes;
+      };
+
+      slider.on('update', function (values, handle) {
+        convertValuesToTime(values, handle);
+      });
+
+      // Collapse search filter bar on mobile
+
+      $(window).bind("resize load", function () {
+        if ($(this).width() < 767) {
+          $(".filter--toggle").removeClass("in");
+          $(".filter--toggle").addClass("out");
+        } else {
+          $(".filter--toggle").removeClass("out");
+          $(".filter--toggle").addClass("in");
+        }
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

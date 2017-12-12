@@ -1,0 +1,82 @@
+/* Modified version of Awesomeplete autocomplete plugin http://leaverou.github.io/awesomplete/ */
+
+.awesomplete [hidden] {
+    display: none;
+}
+
+.awesomplete .visually-hidden {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.awesomplete {
+    position: relative;
+}
+
+.awesomplete>input {
+    display: block;
+}
+
+.awesomplete>ul {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    min-width: 100%;
+    list-style: none;
+    top: calc(#{$base-rem__desktop}*2);
+    border-radius: 3px;
+    background-color: $white;
+    border: 1px solid $mid-grey;
+}
+
+.awesomplete>ul:empty {
+    display: none;
+}
+
+.awesomplete>ul[hidden],
+.awesomplete>ul:empty {
+    opacity: 0;
+    transform: scale(0);
+    display: block;
+    transition-timing-function: ease;
+}
+
+
+/* Pointer */
+
+.awesomplete>ul:before {
+    content: "";
+    position: absolute;
+    top: -.43em;
+    left: 1em;
+    width: 0;
+    height: 0;
+    padding: .4em;
+    background: white;
+    border: inherit;
+    border-right: 0;
+    border-bottom: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.awesomplete {
+    li { 
+        padding: $base-rem;
+        position: relative;
+        cursor: pointer;
+        &[aria-selected="true"]{
+            background-color: $mid-grey;
+        }
+    }
+}
+
+.awesomplete li:hover {
+    color: $green;
+}
+
+.awesomplete mark {
+    background: $yellow;
+}
+
+/*# sourceMappingURL=awesomplete.css.map */

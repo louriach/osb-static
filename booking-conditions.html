@@ -1,0 +1,463 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="">
+  <meta name="author" content="">
+  <title>OneStepBooking.com</title>
+  <link href="css/search-results.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Logo slider -->
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <!-- Checkbox toggle switch -->
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  <!-- Include Bootstrap Datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+  <!-- Include awesomeplete autocomlete plugin for airports -->
+  <script src="https://leaverou.github.io/awesomplete/awesomplete.js"></script>
+  <!-- Currency dropdown -->
+  <script type="text/javascript" src="js/currency-dropdown.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Range slider -->
+  <script type="text/javascript" src="https://refreshless.com/noUiSlider/distribute/nouislider.js?v=1000"></script>
+</head>
+
+<body class="search">
+  <header class="header header--trim">
+    <nav class="[ relative z--1 ] navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <a href="#" class="d--inline-block logo">
+                OneStepBooking.com
+              </a>
+            <div id="currency"></div>
+          </div>
+          <button type="button" class="[ button button--outline ] navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+            aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+          </button>
+        </div>
+        <div id="navbar" class="[ navbar-collapse collapse ]">
+          <ul class="list--none menu-list">
+            <li>
+              <a href="#" class="text--uppercase link__border link__border link__border nav__item">Our airlines</a>
+            </li>
+            <li>
+              <a href="#" class="text--uppercase link__border nav__item">Get in touch</a>
+            </li>
+            <li>
+              <a href="#" class="text--uppercase link__border link__border nav__item">About us</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="text--uppercase relative link__border nav__item dropdown-toggle" data-toggle="dropdown" role="button"
+                aria-haspopup="true" aria-expanded="false">
+                  Your booking
+                </a>
+              <ul class="list--none [ dropdown-menu pull-right ] background--white">
+                <li>
+                  <a href="#" class="text--uppercase [ pb--1 pt--1 ]">Action</a>
+                </li>
+                <li>
+                  <a href="#" class="text--uppercase [ pb--1 pt--1 ]">Another action</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text--white">
+          <h1 class="h2 mb--0 page-title">Contact us</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="mb--3">
+    <div class="container">
+      <div class="row">
+        <div class="[ col-md-9 col-md-push-3 ]">
+          <h2>Booking Conditions</h2>
+          <p><strong>Service Fee.</strong> As these flights are non-commissionable, we charge a service fee of between £10pp and £30pp to cover our costs. This fee&nbsp;has been included in the total cost and is clearly itemised in the price panel on the booking page.</p>
+          <p><strong>Baggage.</strong> Hand baggage is included.&nbsp;Hold baggage can be added at&nbsp;an extra charge, either at time of booking,&nbsp;or left until&nbsp;later.&nbsp;&nbsp;</p>
+          <p><strong>Cancellation</strong>. This booking, the service fee and any credit card charges are strictly non-refundable. We strongly recommend that you take travel insurance before booking, as it may offer you some compensation should you need to cancel.</p>
+          <p>The following Booking Conditions together with the General Information contained on our website form the basis of your relationship with BF Aviation Limited Ltd trading as directline-flights. Please read them carefully as they set out our respective rights and obligations.</p>
+          <p><strong>Please note:</strong> We act as agent only in respect of all flight bookings we take or make on your behalf. We accept no liability in relation to any contract you enter into or for any flight arrangements that you book or for the acts or omissions of any supplier or other person(s) or party(ies) connected with the flight arrangements. For all bookings your contract will be with the supplier of the flight arrangements concerned. We will identify the name of the supplier of your fight at the time of booking. The suppliers' booking conditions will apply to your contract. Copies of these terms and conditions are available from us on request or on the applicable supplier's website.</p>
+          <p>References to "you" and "your" in these Booking Conditions mean all persons named on the booking (including anyone who is added or substituted at a later date). “We” “us” and “our” mean BF Aviaition Ltd trading as directline flights.&nbsp;</p>
+          <p><strong>1. Booking and Confirmation</strong> The first named person on the booking will be the party leader and will be responsible for making all payments due to us. He/she must be at least 18, and be authorised to make the booking on the basis of these booking conditions by all persons on the booking. By submitting a booking, the party leader confirms that he/she is so authorised and that all party members agree to be bound by these booking conditions. If the flight arrangements you wish to book are available, we will issue a booking confirmation email on behalf of the flight supplier concerned.&nbsp;The terms and conditions of the supplier, in addition to these conditions, will be applicable to the contract. NB Please note that due to Data Protection laws, we are only permitted to speak to/correspond with the party leader.</p>
+          <p>CONTACT US IMMEDIATELY IF YOU DO NOT RECEIVE THIS EMAIL OR IF ANY INFORMATION WHICH APPEARS ON THE CONFIRMATION OR ANY OTHER DOCUMENT APPEARS TO BE INCORRECT OR INCOMPLETE AS IT MAY NOT BE POSSIBLE TO MAKE CHANGES LATER. AS WE ACT ONLY AS AGENT WE WILL HAVE NO RESPONSIBILITY FOR ANY ERRORS IN ANY DOCUMENTATION EXCEPT WHERE THOSE ERRORS WERE MADE BY US.</p>
+          <p><strong>Payment terms and method</strong> As we act only as agent for the flight supplier concerned, we reserve the right to pass on to you in full all additional costs and charges of whatever nature imposed by the supplier in accordance with its own terms and conditions.</p>
+          <p>Full payment is required for flight bookings at the time of booking. You must also pay all applicable insurance premiums if you wish to purchase the insurance policy we offer.</p>
+          <p>We will advise you of all mandatory taxes, which you must pay before departure. However, many countries charge departure taxes that can only be paid locally. It is therefore recommended that you retain sufficient local currency to meet such charges. Details of departure taxes can be obtained from the relevant airline when you reconfirm your flight details.&nbsp;Prices quoted on our website and via our call centre exclude any tourism or city taxes which are payable locally and maybe subject to change and introduced after time of booking.</p>
+          <p>Payment is accepted by Delta, Switch/Maestro, MasterCard and Visa. Debit cards are processed with no handling fee. Credit cards will incur a handling fee of 1.9% calculated on the price of the transaction. Cards are accepted subject to security and fraud checks. Debit cards issued outside of the UK will be processed as credit cards. Your bank or card issuer may also apply a foreign transaction fee.</p>
+          <p>Cards are accepted subject to security and fraud checks. Debit cards issued outside of the UK will be processed as credit cards, and subject to our credit card Fee. Your bank or card issuer may also apply a foreign transaction fee.</p>
+          <p>In the event that we incur bank charges as result of a cheque which has been stopped or marked ‘Refer to Drawer', we reserve the right to pass these charges on to you, together with an administration fee of £10 per transaction towards our costs.</p>
+          <p>The online booking discount does not apply.</p>
+          <p>Except where otherwise advised or stated in the booking conditions of the supplier concerned, all monies you pay to us for arrangements will be held on behalf of the supplier(s) concerned.</p>
+          <p>In the event that you do not pay the balance on the due date, or the nearest working day, then we reserve the right to add a late payment penalty of £20 to your booking.</p>
+          <p><strong>Adding extra services to your booking</strong>&nbsp;</p>
+          <p>If you wish to amend or cancel any extra services such as meals, pre-booked seats, seat requests or add/alter your baggage requirements then we will charge you a fixed fee of £10 per change in addition to any costs incurred by ourselves and any costs or charges incurred or imposed by any of our suppliers. Please note that some services may not be changed and therefore may incur a 100% cancellation fee.</p>
+          <p><strong>Advanced Passenger Information (API/APIS)</strong></p>
+          <p>Due to security measures, all airlines are required to provide Advance Passenger Information (API or APIS) for all passengers travelling to and from the UK on an international flight.&nbsp;The API requirements can vary from country to country but will include full names, date of birth, passport number, date of passport issue, place of passport issue and nationality. This is a separate requirement to getting a visa. Please be aware that failure to submit these details to the airline&nbsp;correctly may either result in you or a member of your party not being able to travel or in you being charged at the airport prior to boarding.&nbsp;Please check with the airline that you are travelling with whether these details need to be submitted prior to departure.We cannot be held responsible if anyone in your party is refused entry or travel if the data provided is late, inaccurate or incomplete. Please note that you will still need to follow any entry rules for the countries that you are planning to visit including any visa, customs and passport control regulations.</p>
+          <p><strong>Amendments and cancellations</strong> Bookings for flights may be amended or cancelled in accordance with the relevant supplier terms and conditions and are subject to their amendment and cancellation charges.&nbsp; These are in addition to the Directline Flights amendment and cancellation charges detailed below.</p>
+          <p>Amendments and cancellation fees vary between each supplier according to their individual terms and conditions. Should you make an amendment to your booking the price of your new flight will be based on the prices available on the day your booking is amended. Prices may not be the same as when you booked your flight, and therefore you will be required to cover any difference in price.</p>
+          <p>Any amendment or cancellation requests must be e-mailed to admin@directline-flights.co.uk by the person who made the original booking, and paid the deposit. The e-mail must contain both your directline flights AND Airline booking references which you can find on your booking confirmation email.</p>
+          <p>All confirmed flight only bookings are subject to directline flights cancellation charge of a minimum of £40 per person in addition to the charges of the applicable supplier. The charge for any amendment to your booking is a minimum of £25 per person.</p>
+          <p>NB. If you have to cancel for a reason covered by your insurance policy, you may be able to recover your cancellation charges. Please check this with your insurance company.</p>
+          <p><strong>Most scheduled airlines do not allow changes, and therefore full cancellation charges will usually apply. Most 'no frills' airlines have cancellation charges of 100% from time of booking. No refunds are available.</strong></p>
+          <p><strong>Ticketing</strong> Your tickets (where applicable) and any other documents relating to your booking will be sent to the address which you give us at the time of booking. Provided we have received payment for the total cost of the flight(s), we will dispatch your tickets (where applicable) to you at least 2 weeks prior to departure.</p>
+          <p>For bookings made within 2 weeks of departure if it is necessary for us to make arrangements for you to collect your tickets from the departure airport, these bookings will incur a delivery charge which will be specified at the time of booking and is non-refundable.</p>
+          <p>Please note that two airlines may share the same services, therefore a flight may not be operated by the airline whose designated code is shown on your itinerary and ticket.</p>
+          <p><strong>Flight Information</strong> We are not always in a position at the time of booking to confirm the carrier(s), aircraft type and flight timings which will be used in connection with your flight. Where we are only able to inform you of the likely carrier(s) at the time of booking, we shall inform you of the identity of the actual carrier(s) or any change in the identity of the actual carrier(s) as soon as we become aware of this. The carrier(s), flight timings and types of aircraft shown in this brochure and detailed on your confirmation invoice are for guidance only and are subject to alteration and confirmation. The latest timings will be shown on your tickets. You must accordingly check your tickets very carefully immediately on receipt to ensure you have the correct flight times. It is possible that flight times may be changed even after tickets have been despatched - we will contact you as soon as possible if this occurs.</p>
+          <p>Any change in the identity of the carrier(s), flight timings, and/or aircraft type will not entitle you to cancel or change to other arrangements without paying ours and the supplier's normal charges.</p>
+          <p>Please note the existence of a “Community list” (available for inspection at <a target="_blank" href="http://europa.eu.int/comm/transport/air/safety/flywell_en.htm">http://europa.eu.int/comm/transport/air/safety/flywell_en.htm</a>) detailing air carriers that are subject to an operating ban with the EU Community.</p>
+          <p><strong>Flight Reconfirmation</strong> It is your responsibility to ensure that you reconfirm the departure date and times of all your flights prior to departure. This is particularly important for non-UK departures. Please refer to your supplier's website for details of who to contact.</p>
+          <p><strong>Our Responsibility to you</strong> We act only as an agent for the flight supplier(s) concerned. Your contract for your flight arrangements is directly with the supplier(s) concerned. We accept no liability in relation to the flights themselves or for the acts or omissions of the supplier(s) concerned. For all bookings, the terms and conditions of the supplier will apply to your contract.</p>
+          <p>However, in the event that we are found liable on any basis whatsoever in relation to your booking our maximum liability to you if we are found to have been at fault in relation to any service we provide as agent for the flight supplier(s) concerned (as opposed to any service provided by the supplier(s) for whom we are not responsible) is limited to twice the cost of the booking in question. We do not exclude or limit any liability for death or personal injury which arises as a result of our negligence or that of our employees whilst acting in the course of their employment.</p>
+          <p><strong>Circumstances beyond our control</strong></p>
+          <p>Except where otherwise expressly stated in these conditions, we regret we cannot accept liability or pay any compensation where the performance or prompt performance of our obligations to you is prevented or affected by or you otherwise suffer any damage or loss as a result of "force majeure". In these Booking Conditions, "force majeure" means any event which we or the supplier of the service(s) in question could not, even with all due care, foresee or avoid. Such events may include war or threat of war, riot, civil strife, actual or threatened terrorist activity, industrial dispute, natural or nuclear disaster, adverse weather conditions, fire and all similar events outside our control.</p>
+          <p><strong>Denied Boarding, delays, changes to and cancellation of your booking by the supplier.</strong> If there is a change to or cancellation of your flight booking we will pass on the new details to you together with any compensation or proposals that the supplier may offer. As agent only for the supplier we cannot accept any liability for any changes or cancellations made to your booking.</p>
+          <p>Unfortunately delays sometimes occur and your welfare during this time is the responsibility of the airline concerned. We do not have any liability to you for any delays or for any schedule alterations. Please ensure you address any complaints to the Airline representative at the time. You should also check your insurance policy as you may have cover against delays.</p>
+          <p>Under EU Law, you have rights in some circumstances to refunds and/or compensation from the airline in cases of denied boarding, cancellation or delay to flights. Full details of these rights will be publicised at EU airports and will also be available from airlines. You must claim the appropriate sums directly from the airline as reimbursement in such cases is the responsibility of the airline. You are not entitled to a refund of the price of your arrangements from us or the supplier concerned. If the airline does not comply with these rules you should complain to the air transport users council on 020 724 06061 <a target="_blank" href="http://www.auc.org.uk/">www.auc.org.uk</a>.</p>
+          <p><strong>Insurance</strong> It is a condition of your contract with us that you have adequate insurance cover. Such insurance should ensure that you are properly covered against unexpected cancellation charges, medical costs that might be incurred while you're away, loss of money, or belongings, or personal liability claims. Please note that the cover offered by most credit card companies is rarely adequate.</p>
+          <p><strong>Terms of our Travel Insurance</strong> If you have purchased an insurance policy via our recommended travel insurance provider the following terms apply.</p>
+          <p>a) ABOUT OUR TRAVEL INSURANCE</p>
+          <p>Directline Flights, a trading name of BF Aviaition Ltd of 20 Southend Road, Beckenham, Kent BR3 1SD, is an appointed representative of Citybond Holdings Plc, 109 Elmers End Road, Beckenham, Kent, BR3 4SY, which is authorised and regulated by the Financial Conduct Authority (FCA) to transact general insurance business. Citybond's FCA Registration number is 312208. You can check this information on the Financial Services Register by visiting the website <a target="_blank" href="http://www.fsa.gov.uk/register/home.do">www.fsa.gov.uk</a> or by phoning 0845 606 1234.</p>
+          <p>b) OUR TRAVEL INSURANCE PRODUCTS &amp; SERVICE</p>
+          <p>Our travel insurance is suitable for those UK Citizens who wish to insure themselves when travelling in respect of medical emergencies, cancellation, losses to possessions/money, personal liability and other expenses.</p>
+          <p>We only offer travel insurance products from a single insurer. We do not give advice or make personal recommendations in connection with any travel insurance product. However, we will ask you questions in order to provide you with a quotation, leaving you to make your own decision as to how you wish to proceed and whether this product fulfils your specific insurance requirements.</p>
+          <p>c) INSURANCE PREMIUMS &amp; FEES</p>
+          <p>We collect and hold insurance premiums as agent of the insurer. When we provide you with a quotation, we will tell you about any fees which may apply in addition to the insurance premium.</p>
+          <p>d) YOUR DUTY OF DISCLOSURE</p>
+          <p>You are responsible, on an ongoing basis, for providing us and/or your insurers with all material facts relating to the travel cover we arrange on your behalf. Material facts are those which are likely to affect the assessment and acceptance of the risks being insured. Failure to provide full and accurate information may mean that your travel policy is invalid. If you are in any doubt as to what facts might be considered to be material then you should disclose them to us or your insurers.</p>
+          <p>e) COMPLAINTS PROCEDURE</p>
+          <p>We recognise the importance of service and set ourselves high standards. Should there be an occasion when we do not meet your expectations, we are equally committed to dealing with any complaint in a thorough and professional manner. If you wish to make a complaint please contact us in writing, addressed to:</p>
+          <p>Customer Services, Directline Flights, 20 Southend Road, Beckenham, Kent BR3 1SD</p>
+          <p>If you cannot settle your complaint with us you may be entitled to refer it to the Financial Ombudsman Service.</p>
+          <p>f) COMPENSATION</p>
+          <p>We are covered by the Financial Services Compensation Scheme (FSCS). You may be entitled to compensation from the FSCS if we cannot meet our obligations. This depends on the type of business and the circumstances of the claim. For claims on or after January 1st 2010 insurance advising and arranging is covered for 90% of the claim without any upper limit. Further details about compensation scheme arrangements are available from the FSCS.</p>
+          <p>g) YOUR CANCELLATION RIGHTS</p>
+          <p>If your cover does not meet your requirements, please notify us on 0871 472 4635 within 14 days of receiving your policy documents and return all such documents for a refund of your premium. If during this 14 day period you have travelled, made a claim or intend to make a claim, we can recover all costs that you have used for those services. Please be aware that your cancellation rights are no longer valid after this initial 14 day period.</p>
+          <p><strong>Lost/Stolen Flight Tickets</strong> If you lose your flight tickets or they are stolen before you leave the, certain airlines will not issue a replacement. You would then be required to purchase a new ticket and there may be a delay of up to 12 months before you receive any refund from the airline. If the airline concerned does issue a replacement ticket, we will require payment from you of a minimum of £25 per ticket administration fee plus any charges the airline make.&nbsp; If your ticket is lost or stolen after you have left the UK, certain airlines will not issue a duplicate. You will need to purchase a new ticket locally, at the local fare. When you return to the UK you can apply directly to the original airline for a refund on your lost and unused ticket, but any refund will be entirely at the discretion of the airline and it can take up to 12 months before the airline make any refund.</p>
+          <p><strong>Airline Refund Procedures</strong></p>
+          <p>The refund policies operated by airlines vary greatly. If you return your unused ticket to us we will present it to the relevant airline for assessment. If the airline agrees to issue a refund, we will forward such refund to you less cancellation or administration charge. If you paid us by credit card, we will refund the amount due to you on your credit card, otherwise the refund will be made by cheque. Please note that any refund for part used/return halves of tickets is always less than pro-rata rate. Refunds usually take 10-12 weeks to process, but in some cases may take longer. Tickets returned more than one year from their date of issue are classed as expired by the airline and generally have no refund value at all. We recommend that tickets being sent to us for a refund are sent by recorded delivery post.</p>
+          <p>For complaints arising from flight only bookings, we will act as a liaison between you and the supplier, to try to assist in resolving the problem. If we cannot help and you wish to take matters further, you must contact the supplier directly.</p>
+          <p><strong>Complaints</strong></p>
+          <p>If you have any complaints concerning the booking services we provide as agent for the flight supplier(s) concerned (as opposed to any service provided by the supplier(s) for whom we are not responsible), you must inform us straight away in writing and in any event within 28 days of the end of any arrangements booked through us. Any assistance provided in resolving a complaint in relation to any arrangements is provided on a goodwill basis and in our capacity as agent only</p>
+          <p>Please write to our offices in the UK. If you have special needs which prevent you from writing to us then, when possible, we will accept details of your complaint over the telephone.</p>
+          <p>The address to send complaints to is:</p>
+          <div>Customer Services Department</div>
+          <div>Directline Flights</div>
+          <div>20 Southend Road</div>
+          <div>Beckenham</div>
+          <div>BR3 1SD</div>
+          <div>E-mail: <a href="mailto:admin@directline-flights.co.uk">admin@directline-flights.co.uk</a></div>                
+          <div>Telephone: 0800 408 5615 or 020 8239 8200&nbsp;</div>
+          <p>We would point out that failure to follow the above procedures (and/or failure to complain within 28 days of your return) may reduce or extinguish any rights you have to claim compensation from us, or from any relevant supplier.</p                
+          <p><strong>Passports &amp; Visa (British Citizens) and Health Requirements</strong> It is your responsibility to ensure that you and all those travelling with you have a valid passport and any necessary visa and that you have obtained any necessary vaccinations to gain entry to any country you are visiting. We recommend that you check passport/visa requirements with the Embassy or Consulate of the country you intend to visit and that you consult your GP or the Foreign Office regarding health requirements. Requirements may change and you must check the up to date position in good time before departure. It is your responsibility to ensure that you are in possession of all necessary travel and health documents before departure. We regret we cannot accept any liability if you are refused entry onto any transport or into any country due to failure on your part to carry correct documentation. If failure to have any necessary travel or other documents results to fines, surcharges or other financial penalty being imposed on us, you will be responsible for reimbursing us accordingly.</p>
+          <p>All clients must be in possession of a full 10-year passport. You MUST inform directline holidays if you are travelling on a British Subject's Passport.</p>
+          <p><strong>Goa and Kerala</strong> - The Indian authorities will not permit Indian passport holders to travel on Charter Flights. A valid visa is required by British passport holders prior to travel.</p>
+          <p><strong>Visas</strong> - The following applies to EC passport holders.&nbsp; Visas are required to be purchased in advance for certain countries, including Egypt and India. Other countries, including Israel and Turkey require tourist single entry visas to be purchased on arrival. If you are not travelling on an EC passport, other rules may apply.&nbsp; Please check for advice with the embassy of the country you are travelling to.</p>
+          <p><strong>Medical Advice</strong> Please ensure that you ask a doctor for any medical advice applicable to the countries you will visit. Check what vaccinations you need with your GP at least six weeks before you travel. Make sure that any medication you need to take regularly is legal in the country you are travelling to. Pack any prescription medication in your hand luggage and take the prescription with you. If you are travelling within the EU, get a <a rel="nofollow" href="http://www.directline-holidays.co.uk/sub_page.cfm/title/EHIC/section/holiday_insurance/editID/22">EHIC</a> (formerly E111) from the Post Office so that you can get reduced or free emergency care.</p>
+          <p><strong>Correct Spelling of Names, Titles</strong> It is your responsibility to ensure all details you give us at the time of booking are correct and accurate, including but not limited to; all names, titles, initials, date of birth of those travelling, telephone numbers, email and postal addresses.&nbsp; Changes cannot be made at a later date without the imposition of cancellation and amendment charges in addition to any other costs or charges incurred by us or any of our suppliers.&nbsp;&nbsp;Please note too, that correct ages are required for insurance cover.</p>
+          <p><strong>Pricing Errors</strong> Directline-flights endeavours to ensure that all pricing and other information on its website is accurate. However, on very rare occasions, errors do occur. You must therefore ensure you check all details of your holiday with us at the time of booking.</p>
+          <p>Should such an error occur, either through our own fault or the fault of our suppliers, we will contact the customers concerned. We reserve the right to cancel your booking and will provide a full refund. If your booking is cancelled by us within 48 hours of it being confirmed you will not be entitled to any compensation.</p>
+          <p><strong>Special requests and medical problems</strong> If you wish to make a special request, you must do so at the time of booking. We will try to pass any reasonable requests on to the relevant supplier but we cannot guarantee that requests will be met. The fact that a special request has been noted on your confirmation invoice or any other documentation or that it has been passed on to the supplier is not confirmation that the request will be met. Failure to meet any special request will not be a breach of contract on our part unless the request has been specifically confirmed.</p>
+          <p>If you or any member of your party has any medical problem or disability which may affect your chosen holiday, you must give us full details in writing at the time of booking.</p>
+          <p><strong>Law and Jurisdiction</strong> Your contract will be governed by English law and any disputes will be dealt with by the courts of England and Wales. If you live in Northern Ireland or Scotland, the courts of Northern Ireland or Scotland (as appropriate) can deal with any disputes.</p>
+          <p>We reserve the right to alter these booking conditions and you should check our website at the time of booking.</p>
+          <p><a href="http://www.directline-flights.co.uk/sub_page.cfm/title/Data%20protection%2C%20Privacy%20Policy%20and%20Marketing%20Statement/section/booking_conditions/editID/20">Data protection, privacy policy and marketing statement</a></p>
+          <p><strong>Personal information</strong> We will provide your personal information, as well as any personal information you provide in relation to those other persons who form your booking party, to suppliers and transport providers who may be located outside the UK and/or EU, to enable the operation of the services requested by you. If you make special requests, which include, but are not limited to, special dietary, religious or disability-related requirements, which constitute sensitive information, the relevant data will also be passed to the relevant suppliers and transport providers to enable provision of the services to you. If you are aged under 16 on your departure date you must be accompanied by an adult aged 18 or over.&nbsp;&nbsp;</p>
+          <p><strong>ATOL Protection</strong> If we, or the suppliers identified on your ATOL certificate, are unable to provide the services listed (or a suitable alternative, through an alternative ATOL holder or otherwise) for reasons of insolvency, the Trustees of the Air Travel Trust may make a payment to (or confer a benefit on) you under the ATOL scheme. You agree that in return for such a payment or benefit you assign absolutely to those Trustees any claims which you have or may have arising out of or relating to the non-provision of the services, including any claim against us, the travel agent (or your credit card issuer where applicable). You also agree that any such claims may be re-assigned to another body, if that other body has paid sums you have claimed under the ATOL scheme.</p>
+          <p>Directline Flights is a trading name of BF Aviation&nbsp;Ltd a limited company incorporated in England and Wales under registration number 08615973, whose registered office is at East House, 109 South Worple Way, London SW14 8TN</p>
+        </div>
+        <div class="sidebar-search [ col-md-3 col-md-pull-9 ]">
+          <form>
+            <fieldset>
+              <legend class="mb--2">Search for flights</legend>
+              <div class="mb--1 col-md-12 p--0">
+                <label class="d--block mb--1 small" for="flight-from">Travelling from</label>
+                <input type="text" id="flight-from" name="flight-from" placeholder="From" value="London (LGW)" class="input--border small w--100">
+              </div>
+              <div class="mb--1 col-md-12 p--0">
+                <label class="d--block mb--1 small" for="flight-to">Travelling to</label>
+                <input type="text" id="flight-to" name="flight-to" placeholder="To" value="Barcelona (BCN)" class="input--border small w--100">
+              </div>
+              <div class="[ col-xs-9 col-sm-9 col-md-8 ] mb--1 p--0 pr--1">
+                <label class="d--block mb--1 small" for="flight-departure"><span class="hidden-xs">Date</span> Departing</label>
+                <input type="text" id="flight-departure" name="daterange" placeholder="Date" value="08-09-2017" class="date-popout input--border small w--100">
+              </div>
+              <div class="[ col-xs-3 col-sm-3 col-md-4 ] mb--1 p--0 pl--1">
+                <div class="mb--1 text--center small">Return?</div>
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                  <label class="onoffswitch-label small" for="myonoffswitch">
+                      <span class="onoffswitch-inner input--border"></span>
+                      <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="mb--1 col-md-12 p--0 date-return">
+                <label class="d--block mb--1 small" for="flight-return">Returning</label>
+                <input type="text" id="flight-return" name="return-departure" placeholder="Date" value="2017-01-28" class="date-popout input--border small w--100">
+              </div>
+              <div class="mb--1 [ col-xs-6 col-sm-6 col-md-6 ] p--0 pr--1">
+                <label class="d--block mb--1 small" for="flight-passengers">Adults</label>
+                <select id="flight-passengers" name="return-passengers" placeholder="Passengers" value="" class="input--border small w--100">
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+              </select>
+              </div>
+              <div class="[ col-xs-6 col-sm-6 col-md-6 ] mb--2 p--0 pl--1">
+                <label class="d--block mb--1 small" for="flight-passenger-18">Under 18s</label>
+                <select id="flight-passengers-18" name="flight-passengers-18" placeholder="Passengers" value="" class="input--border small w--100">
+                <option value="zero">0</option>
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+              </select>
+              </div>
+              <div class="mb--3 col-md-12 p--0">
+                <button class="[ button button--orange ] small w--100">Search for flights</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <!-- amend search -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="background--dark-grey footer">
+      <div class="container">
+        <div class="row">
+          <div class="[ text--center text--white small ] [ pb--3 pt--3 ] col-md-12">
+            <div class="mb--3">
+              <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--white.svg">
+            </div>
+            <ul class="list--none list--inline">
+              <li>
+                <a href="#" class="text--white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text--white">Contact Us</a>
+              </li>
+              <li>
+                <a href="#" class="text--white">Booking Conditions</a>
+              </li>
+              <li>
+                <a href="#" class="text--white">Privacy Policy</a>
+              </li>
+            </ul>
+            <p>OneStepBooking.com is a trading name of BF Aviation Ltd, a limited company incorporated in England and Wales under
+              registration number 08615973, whose registered office is at 16 Beaufort Court, Admirals Way, Docklands, London,
+              E14 9XL.</p>
+            <div class="copyright">
+              © OneStepBooking.com All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      // Slick slider - Used for logo slider
+
+      $('.regular').slick({
+        arrows: false,
+        centerMode: true,
+        centerPadding: '54px',
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 6,
+      });
+
+      // Date popout calendar
+
+      $('.date-popout')
+        .datepicker({
+          autoclose: true,
+          format: 'dd/mm/yyyy'
+        })
+
+      // Sliding checkbox on/off switch
+
+      $('.onoffswitch-checkbox')
+        .click(function () {
+          $('.search--return').toggleClass('inactive');
+        })
+
+      // Dynamic customer age select menu
+
+      $('#js-passenger-18--wrapper').hide();
+      $('#passenger-18').on('change', function () {
+        $('#js-passenger-18--wrapper').show();
+        $('#js-passenger-18--age').empty();
+        $.each(new Array(+this.value), function () {
+          $('<div />', {
+              html: '<div class="[ mb--1 p--0 ] col-xs-12"><label class="[ p--0 mt--1 ] small col-xs-4 col-sm-5">Age</label><select name="child-age" class="small col-xs-8 col-sm-7 button--outline"><option value="Age">Age</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option></select></div>'
+            })
+            .appendTo('#js-passenger-18--age').hide().slideDown(100);
+        });
+      });
+      $(".js-passenger--button").click(function () {
+        $(".form-dropdown--fields").slideUp(100);
+      });
+
+      // Form passenger dropdown toggle
+
+      $(".form-dropdown--fields").hide();
+      $(".form-dropdown--toggle").click(function () {
+        $(".form-dropdown--fields").slideToggle(100);
+      });
+      // Awesomeplete airport list
+
+      // Flight from
+
+      var input = document.getElementById("flight-from");
+      new Awesomplete(input, {
+        list: ["London Gatwick (LGW)", "London Stansted (STN)", "London Heathrow (LHR)", "Dublin (DUB)",
+          "Madrid (MAD)", "Barcelona (BCN)", "Berlin (BER)"
+        ]
+      });
+
+      // Flight to
+      var input = document.getElementById("flight-to");
+      new Awesomplete(input, {
+        list: ["London Gatwick (LGW)", "London Stansted (STN)", "London Heathrow (LHR)", "Dublin (DUB)",
+          "Madrid (MAD)", "Barcelona (BCN)", "Berlin (BER)"
+        ]
+      });
+
+      //Dropdown plugin data
+      var ddData = [{
+          text: "<span class='flag-icon flag-icon-us'></span> USD",
+          value: 1,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-gb'></span> GBP",
+          value: 2,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-au'></span> AUD",
+          value: 3,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-us'></span> USD",
+          value: 4,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-gb'></span> GBP",
+          value: 5,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-au'></span> AUD",
+          value: 6,
+          selected: false,
+        }
+      ];
+
+      $('#currency').ddslick({
+        data: ddData,
+      });
+
+      $('#currency').mouseenter(function (event) {
+        $('body').css('overflow', 'hidden');
+      }).mouseleave(function (event) {
+        $('body').css('overflow', '');
+      });
+
+      // Range slider 
+
+      var snapSlider = document.getElementById('js-slider-handles__outbound');
+
+      leftValue = document.getElementById('outbound-value-lower'),
+        rightValue = document.getElementById('outbound-value-upper');
+
+      // 0 = initial minutes from start of day
+      // 1440 = maximum minutes in a day
+      // step: 30 = amount of minutes to step by. 
+      var initialStartMinute = 0,
+        initialEndMinute = 1440,
+        step = 30;
+
+      slider = noUiSlider.create(snapSlider, {
+        start: [initialStartMinute, initialEndMinute],
+        connect: true,
+        step: step,
+        range: {
+          'min': initialStartMinute,
+          'max': initialEndMinute
+        }
+      });
+
+      var convertValuesToTime = function (values, handle) {
+        var hours = 0,
+          minutes = 0;
+
+        if (handle === 0) {
+          hours = convertToHour(values[0]);
+          minutes = convertToMinute(values[0], hours);
+          leftValue.innerHTML = formatHoursAndMinutes(hours, minutes);
+          return;
+        };
+
+        hours = convertToHour(values[1]);
+        minutes = convertToMinute(values[1], hours);
+        rightValue.innerHTML = formatHoursAndMinutes(hours, minutes);
+
+      };
+
+      var convertToHour = function (value) {
+        return Math.floor(value / 60);
+      };
+      var convertToMinute = function (value, hour) {
+        return value - hour * 60;
+      };
+      var formatHoursAndMinutes = function (hours, minutes) {
+        if (hours.toString().length == 1) hours = '0' + hours;
+        if (minutes.toString().length == 1) minutes = '0' + minutes;
+        return hours + ':' + minutes;
+      };
+
+      slider.on('update', function (values, handle) {
+        convertValuesToTime(values, handle);
+      });
+
+      // Collapse search filter bar on mobile
+
+      $(window).bind("resize load", function () {
+        if ($(this).width() < 767) {
+          $(".filter--toggle").removeClass("in");
+          $(".filter--toggle").addClass("out");
+        } else {
+          $(".filter--toggle").removeClass("out");
+          $(".filter--toggle").addClass("in");
+        }
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

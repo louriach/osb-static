@@ -1,0 +1,907 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="">
+  <meta name="author" content="">
+  <title>OneStepBooking.com</title>
+  <link href="css/search-results.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Logo slider -->
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <!-- Checkbox toggle switch -->
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  <!-- Include Bootstrap Datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+  <!-- Include awesomeplete autocomlete plugin for airports -->
+  <script src="https://leaverou.github.io/awesomplete/awesomplete.js"></script>
+  <!-- Currency dropdown -->
+  <script type="text/javascript" src="js/currency-dropdown.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Range slider -->
+  <script type="text/javascript" src="https://refreshless.com/noUiSlider/distribute/nouislider.js?v=1000"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+</head>
+
+<body class="search">
+  <header class="header header--trim">
+    <nav class="[ relative z--1 ] navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <a href="#" class="d--inline-block logo">
+                OneStepBooking.com
+              </a>
+            <div id="currency"></div>
+          </div>
+          <button type="button" class="[ button button--outline ] navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+            aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+          </button>
+        </div>
+        <div id="navbar" class="[ navbar-collapse collapse ]">
+          <ul class="list--none menu-list">
+            <li>
+              <a href="#" class="text--uppercase link__border link__border link__border nav__item">Our airlines</a>
+            </li>
+            <li>
+              <a href="#" class="text--uppercase link__border nav__item">Get in touch</a>
+            </li>
+            <li>
+              <a href="#" class="text--uppercase link__border link__border nav__item">About us</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="text--uppercase relative link__border nav__item dropdown-toggle" data-toggle="dropdown" role="button"
+                aria-haspopup="true" aria-expanded="false">
+                  Your booking
+                </a>
+              <ul class="list--none [ dropdown-menu pull-right ] background--white">
+                <li>
+                  <a href="#" class="text--uppercase [ pb--1 pt--1 ]">Action</a>
+                </li>
+                <li>
+                  <a href="#" class="text--uppercase [ pb--1 pt--1 ]">Another action</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text--white">
+          <h1 class="h2 mb--0 page-title">Search results for <abbr title="London Gatwick">LGW</abbr></strong> to <strong><abbr title="Barcelona">BCN</abbr></strong></h1>
+          <p>Departing <strong>24/01/2017</strong> returning <strong>28/01/2017</strong></p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 mb--2 col-md-push-3">
+          <div class="search--summary col-sm-6 col-md-6">
+            <p class="small">Flights from <strong><strong>$100</strong></strong> with <strong>2 airlines</strong></p>
+          </div>
+          <div class="search--sorting col-sm-6 col-md-6">
+            <label for="sort-select" class="small">Sort by</label>
+            <select class="input--border small">
+              <option value="price">Price per adult</option>
+              <option value="duration">Total journey time</option>
+              <option value="outbound_departure_time">Outbound: Departure time</option>
+              <option value="return_departure_time">Return: Departure time</option>
+              <option value="airlines">Airline</option>
+              <option value="stops">Stops</option>
+            </select>
+          </div>
+
+          <div class="[ mb--3 p--0 ] col-sm-12 col-md-12 results">
+              <div class="[ p--0 mb--2 ] search-result--wrapper col-md-12">
+                <div class="search-result">
+                      <div class="small p--0 col-xs-12">
+                          <div class="col-md-12">
+                              <p>We're sorry, but we couldn't find any flights matching your filter selection.</p>
+                              <p>Please amend your query to search for more flights.</p>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+            <div class="[ p--0 mb--2 ] search-result--wrapper col-md-12">
+              <div class="search-result">
+                <div class="small p--0 col-xs-12">
+                  <div class="col-md-12">
+                      <p>We're sorry, but we couldn't find any flights matching your query.</p>
+                      <p>Please amend your query below to search for more flights.</p>
+                      <div class="divider"></div>
+                    </div>
+                      <form>
+                          <fieldset>
+                            <legend class="mb--2 d--none">Amend your search</legend>
+                            <div class="mb--2 col-md-6">
+                              <label class="d--block mb--1" for="flight-from">Travelling from</label>
+                              <input type="text" id="flight-from" name="flight-from" placeholder="From" value="London (LGW)" class="input--border small w--100">
+                            </div>
+                            <div class="mb--2 col-md-6">
+                              <label class="d--block mb--1" for="flight-to">Travelling to</label>
+                              <input type="text" id="flight-to" name="flight-to" placeholder="To" value="Barcelona (BCN)" class="input--border small w--100">
+                            </div>
+                            <div class="[ col-xs-9 col-sm-9 col-md-4 ] mb--2">
+                              <label class="d--block mb--1" for="flight-departure"><span class="hidden-xs">Date</span> Departing</label>
+                              <input type="text" id="flight-departure" name="daterange" placeholder="Date" value="08-09-2017" class="date-popout input--border small w--100">
+                            </div>
+                            <div class="[ col-xs-3 col-sm-3 col-md-4 ] mb--2 pl--1 pr--2">
+                              <div class="mb--1 text--center">Return?</div>
+                              <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                                <label class="onoffswitch-label" for="myonoffswitch">
+                              <span class="onoffswitch-inner input--border"></span>
+                              <span class="onoffswitch-switch"></span>
+                            </label>
+                              </div>
+                            </div>
+                            <div class="mb--2 col-md-4 date-return">
+                              <label class="d--block mb--1" for="flight-return">Returning</label>
+                              <input type="text" id="flight-return" name="return-departure" placeholder="Date" value="2017-01-28" class="date-popout input--border small w--100">
+                            </div>
+                            <div class="mb--1 [ col-xs-6 col-sm-6 col-md-6 ]">
+                              <label class="d--block mb--1" for="flight-passengers">Adults</label>
+                              <select id="flight-passengers" name="return-passengers" placeholder="Passengers" value="" class="input--border small w--100">
+                                <option value="one">1</option>
+                                <option value="two">2</option>
+                                <option value="three">3</option>
+                                <option value="four">4</option>
+                              </select>
+                            </div>
+                            <div class="mb--2 [ col-xs-6 col-sm-6 col-md-6 ]">
+                              <label class="d--block mb--1" for="flight-passenger-18">Under 18s</label>
+                              <select id="flight-passengers-18" name="flight-passengers-18" placeholder="Passengers" value="" class="input--border small w--100">
+                                <option value="zero">0</option>
+                                <option value="one">1</option>
+                                <option value="two">2</option>
+                                <option value="three">3</option>
+                                <option value="four">4</option>
+                              </select>
+                            </div>
+                            <div class="text--right pl--2 pr--2">
+                              <button class="[ button button--orange ] small">Search for flights</button>
+                            </div>
+                          </fieldset>
+                        </form>                   
+                </div>
+              </div>
+            </div>            
+            <div class="[ p--0 mb--2 ] search-result--wrapper col-md-12">
+              <a href="#" class="search-result">
+                <div class="text--center small p--0 [ col-xs-12 col-sm-9 col-md-9 ]">
+                  <div class="p--0 text--center col-md-12">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--easyjet.png" alt="" class="airline-logo" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>23:50</strong> <abbr title="London Gatwick">LGW</abbr>
+                    </div>
+                    <div class="p--0 [ col-md-1 col-sm-1 col-xs-1 ]">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plane.svg" alt="" class="plane" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>01:10</strong> <abbr title="Barcelona">BCN</abbr> <span title="Lands next day">(+1)</span>
+                    </div>
+                    <div class="p--0 [ col-xs-3 col-md-2 col-sm-2 ]">
+                      2h 20m
+                    </div>
+                  </div>
+                  <div class="divider p--0 col-sm-12 col-xs-12 col-md-12"></div>
+                  <div class="p--0 text--center col-md-12">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--easyjet.png" alt="" class="airline-logo" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>08:50</strong> <abbr title="Barcelona">BCN</abbr>
+                    </div>
+                    <div class="p--0 [ col-md-1 col-sm-1 col-xs-1 ]">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plane.svg" alt="" class="plane" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>10:55</strong> <abbr title="London Stansted"><span class="highlight" title="Returns to a different airport">STN</span></abbr>
+                    </div>
+                    <div class="p--0 [ col-xs-3 col-md-2 col-sm-2 ]">
+                      2h 5m
+                    </div>
+                  </div>
+                </div>
+                <div class="text--center search-result--price col-xs-12 col-sm-3 col-md-3">
+                  <span class="search-result--currency"><strong>$100</strong></span>
+                  <span class="[ button button--green ]">Continue</span>
+                  <div class="stub stub--top"></div>
+                  <div class="stub stub--middle"></div>
+                  <div class="stub stub--bottom"></div>
+                </div>
+              </a>
+            </div>
+            <div class="[ p--0 mb--2 ] search-result--wrapper col-md-12">
+              <a href="#" class="search-result">
+                <div class="text--center small search-result--single [ col-xs-12 col-sm-9 col-md-9 ]">
+                  <div class="p--0 text--center col-md-12">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--ryanair.png" alt="" class="airline-logo" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>08:50</strong> <abbr title="Barcelona">BCN</abbr>
+                    </div>
+                    <div class="p--0 [ col-md-1 col-sm-1 col-xs-1 ]">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plane.svg" alt="" class="plane" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>10:55</strong> <abbr title="London Gatwick">LGW</abbr>
+                    </div>
+                    <div class="p--0 [ col-xs-3 col-md-2 col-sm-2 ]">
+                      2h 5m
+                    </div>
+                  </div>
+                </div>
+                <div class="text--center search-result--price col-xs-12 col-sm-3 col-md-3">
+                  <span class="search-result--currency"><strong>$100</strong></span>
+                  <span class="[ button button--green ]">Continue</span>
+                  <div class="stub stub--top"></div>
+                  <div class="stub stub--middle"></div>
+                  <div class="stub stub--bottom"></div>
+                </div>
+              </a>
+            </div>
+            <div class="[ p--0 mb--2 ] search-result--wrapper col-md-12">
+              <a href="#" class="search-result">
+                <div class="text--center small p--0 [ col-xs-12 col-sm-9 col-md-9 ]">
+                  <div class="p--0 text--center col-md-12">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--tui-fly.png" alt="" class="airline-logo" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>08:50</strong> <abbr title="Barcelona">BCN</abbr>
+                    </div>
+                    <div class="p--0 [ col-md-1 col-sm-1 col-xs-1 ]">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plane.svg" alt="" class="plane" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>10:55</strong> <abbr title="London Gatwick">LGW</abbr>
+                    </div>
+                    <div class="p--0 [ col-xs-3 col-md-2 col-sm-2 ]">
+                      2h 5m
+                    </div>
+                  </div>
+                  <div class="divider p--0 col-sm-12 col-xs-12 col-md-12"></div>
+                  <div class="p--0 text--center col-md-12">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--tiger-air.png" alt="" class="airline-logo" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>08:50</strong> <abbr title="Barcelona">BCN</abbr>
+                    </div>
+                    <div class="p--0 [ col-md-1 col-sm-1 col-xs-1 ]">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plane.svg" alt="" class="plane" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>10:55</strong> <abbr title="London Stansted"><span class="highlight" title="Returns to a different airport">STN</span></abbr>
+                    </div>
+                    <div class="p--0 [ col-xs-3 col-md-2 col-sm-2 ]">
+                      2h 5m
+                    </div>
+                  </div>
+                </div>
+                <div class="text--center search-result--price col-xs-12 col-sm-3 col-md-3">
+                  <span class="search-result--currency"><strong>$100</strong></span>
+                  <span class="[ button button--green ]">Continue</span>
+                  <div class="stub stub--top"></div>
+                  <div class="stub stub--middle"></div>
+                  <div class="stub stub--bottom"></div>
+                </div>
+              </a>
+            </div>
+            <div class="[ p--0 mb--2 ] search-result--wrapper col-md-12">
+              <a href="#" class="search-result">
+                <div class="text--center small p--0 [ col-xs-12 col-sm-9 col-md-9 ]">
+                  <div class="p--0 text--center col-md-12">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--southwest.png" alt="" class="airline-logo" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>08:50</strong> <abbr title="Barcelona">BCN</abbr>
+                    </div>
+                    <div class="p--0 [ col-md-1 col-sm-1 col-xs-1 ]">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plane.svg" alt="" class="plane" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>10:55</strong> <abbr title="London Gatwick">LGW</abbr>
+                    </div>
+                    <div class="p--0 [ col-xs-3 col-md-2 col-sm-2 ]">
+                      2h 5m
+                    </div>
+                  </div>
+                  <div class="divider p--0 col-sm-12 col-xs-12 col-md-12"></div>
+                  <div class="p--0 text--center col-md-12">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--air-asia.png" alt="" class="airline-logo" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>08:50</strong> <abbr title="Barcelona">BCN</abbr>
+                    </div>
+                    <div class="p--0 [ col-md-1 col-sm-1 col-xs-1 ]">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plane.svg" alt="" class="plane" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>10:55</strong> <abbr title="London Gatwick">LGW</abbr>
+                    </div>
+                    <div class="p--0 [ col-xs-3 col-md-2 col-sm-2 ]">
+                      2h 5m
+                    </div>
+                  </div>
+                </div>
+                <div class="text--center search-result--price col-xs-12 col-sm-3 col-md-3">
+                  <span class="search-result--currency"><strong>$100</strong></span>
+                  <span class="[ button button--green ]">Continue</span>
+                  <div class="stub stub--top"></div>
+                  <div class="stub stub--middle"></div>
+                  <div class="stub stub--bottom"></div>
+                </div>
+              </a>
+            </div>
+            <div class="[ p--0 mb--2 ] search-result--wrapper col-md-12">
+              <a href="#" class="search-result">
+                <div class="text--center small p--0 [ col-xs-12 col-sm-9 col-md-9 ]">
+                  <div class="p--0 text--center col-md-12">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--easyjet.png" alt="" class="airline-logo" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>08:50</strong> <abbr title="Barcelona">BCN</abbr>
+                    </div>
+                    <div class="p--0 [ col-md-1 col-sm-1 col-xs-1 ]">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plane.svg" alt="" class="plane" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>10:55</strong> <abbr title="London Gatwick">LGW</abbr>
+                    </div>
+                    <div class="p--0 [ col-xs-3 col-md-2 col-sm-2 ]">
+                      2h 5m
+                    </div>
+                  </div>
+                  <div class="divider p--0 col-sm-12 col-xs-12 col-md-12"></div>
+                  <div class="p--0 text--center col-md-12">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--tiger-air.png" alt="" class="airline-logo" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>08:50</strong> <abbr title="Barcelona">BCN</abbr>
+                    </div>
+                    <div class="p--0 [ col-md-1 col-sm-1 col-xs-1 ]">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plane.svg" alt="" class="plane" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>10:55</strong> <abbr title="London Gatwick">LGW</abbr>
+                    </div>
+                    <div class="p--0 [ col-xs-3 col-md-2 col-sm-2 ]">
+                      2h 5m
+                    </div>
+                  </div>
+                </div>
+                <div class="text--center search-result--price col-xs-12 col-sm-3 col-md-3">
+                  <span class="search-result--currency"><strong>$100</strong></span>
+                  <span class="[ button button--green ]">Continue</span>
+                  <div class="stub stub--top"></div>
+                  <div class="stub stub--middle"></div>
+                  <div class="stub stub--bottom"></div>
+                </div>
+              </a>
+            </div>
+            <div class="[ p--0 mb--2 ] search-result--wrapper col-md-12">
+              <a href="#" class="search-result">
+                <div class="text--center small p--0 [ col-xs-12 col-sm-9 col-md-9 ]">
+                  <div class="p--0 text--center col-md-12">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--easyjet.png" alt="" class="airline-logo" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>08:50</strong> <abbr title="Barcelona">BCN</abbr>
+                    </div>
+                    <div class="p--0 [ col-md-1 col-sm-1 col-xs-1 ]">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plane.svg" alt="" class="plane" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>10:55</strong> <abbr title="London Gatwick">LGW</abbr>
+                    </div>
+                    <div class="p--0 [ col-xs-3 col-md-2 col-sm-2 ]">
+                      2h 5m
+                    </div>
+                  </div>
+                  <div class="divider p--0 col-sm-12 col-xs-12 col-md-12"></div>
+                  <div class="p--0 text--center col-md-12">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--tiger-air.png" alt="" class="airline-logo" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>08:50</strong> <abbr title="Barcelona">BCN</abbr>
+                    </div>
+                    <div class="p--0 [ col-md-1 col-sm-1 col-xs-1 ]">
+                      <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plane.svg" alt="" class="plane" />
+                    </div>
+                    <div class="p--0 [ col-xs-4 col-sm-3 col-md-3 ]">
+                      <strong>10:55</strong> <abbr title="London Gatwick">LGW</abbr>
+                    </div>
+                    <div class="p--0 [ col-xs-3 col-md-2 col-sm-2 ]">
+                      2h 5m
+                    </div>
+                  </div>
+                </div>
+                <div class="text--center search-result--price col-xs-12 col-sm-3 col-md-3">
+                  <span class="search-result--currency"><strong>$100</strong></span>
+                  <span class="[ button button--green ]">Continue</span>
+                  <div class="stub stub--top"></div>
+                  <div class="stub stub--middle"></div>
+                  <div class="stub stub--bottom"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="[ mb--3 p--0 ] col-md-12 small pagination">
+            <ul class="list--none list--inline">
+              <li>
+                <a href="#" class="button button--outline"><abbr title="Previous">Prev</abbr></a>
+              </li>
+              <li>
+                <a href="#" class="button button--outline inactive">1</a>
+              </li>
+              <li>
+                <a href="#" class="button button--outline">2</a>
+              </li>
+              <li>
+                <a href="#" class="button button--outline">3</a>
+              </li>
+              <li>
+                <a href="#" class="button button--outline">4</a>
+              </li>
+              <li>
+                <a href="#" class="button button--outline">Next</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- search results -->
+        <div class="sidebar-search [ col-md-3 col-md-pull-9 ]">
+
+          <div class="filter--toggle" data-toggle="modal" data-target=".search--modal">
+            Filter results
+          </div>
+
+          <div class="modal fade search--modal" tabindex="-1" role="dialog" aria-labelledby="filter" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content col-xs-12">
+                <div class="w--100">
+                  <div class="mb--2 small">
+                    <a class="collapse--toggle collapsed link--clean" data-toggle="collapse" href="#amend-search" aria-expanded="true" aria-controls="amend-search">
+                  Amend your search
+                </a>
+                  </div>
+                  <div class="small collapse" id="amend-search">
+                    <div class="mb--2">
+                      <form>
+                        <fieldset>
+                          <legend class="mb--2 d--none">Amend your search</legend>
+                          <div class="mb--1 col-md-12 p--0">
+                            <label class="d--block mb--1" for="flight-from">Travelling from</label>
+                            <input type="text" id="flight-from" name="flight-from" placeholder="From" value="London (LGW)" class="input--border small w--100">
+                          </div>
+                          <div class="mb--1 col-md-12 p--0">
+                            <label class="d--block mb--1" for="flight-to">Travelling to</label>
+                            <input type="text" id="flight-to" name="flight-to" placeholder="To" value="Barcelona (BCN)" class="input--border small w--100">
+                          </div>
+                          <div class="[ col-xs-9 col-sm-9 col-md-8 ] [ mb--1 pl--0 pr--1 ]">
+                            <label class="d--block mb--1" for="flight-departure"><span class="hidden-xs">Date</span> Departing</label>
+                            <input type="text" id="flight-departure" name="daterange" placeholder="Date" value="08-09-2017" class="date-popout input--border small w--100">
+                          </div>
+                          <div class="[ col-xs-3 col-sm-3 col-md-4 ] [ mb--1 pr--0 pl--1 ]">
+                            <div class="mb--1 text--center">Return?</div>
+                            <div class="onoffswitch">
+                              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                              <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner input--border"></span>
+                            <span class="onoffswitch-switch"></span>
+                          </label>
+                            </div>
+                          </div>
+                          <div class="mb--1 col-md-12 p--0 date-return">
+                            <label class="d--block mb--1" for="flight-return">Returning</label>
+                            <input type="text" id="flight-return" name="return-departure" placeholder="Date" value="2017-01-28" class="date-popout input--border small w--100">
+                          </div>
+                          <div class="mb--1 [ col-xs-6 col-sm-6 col-md-6 ] [ pl--0 pr--1 ]">
+                            <label class="d--block mb--1" for="flight-passengers">Adults</label>
+                            <select id="flight-passengers" name="return-passengers" placeholder="Passengers" value="" class="input--border small w--100">
+                          <option value="one">1</option>
+                          <option value="two">2</option>
+                          <option value="three">3</option>
+                          <option value="four">4</option>
+                        </select>
+                          </div>
+                          <div class="[ col-xs-6 col-sm-6 col-md-6 ] [ mb--2 pr--0 pl--1 ]">
+                            <label class="d--block mb--1" for="flight-passenger-18">Under 18s</label>
+                            <select id="flight-passengers-18" name="flight-passengers-18" placeholder="Passengers" value="" class="input--border small w--100">
+                          <option value="zero">0</option>
+                          <option value="one">1</option>
+                          <option value="two">2</option>
+                          <option value="three">3</option>
+                          <option value="four">4</option>
+                        </select>
+                          </div>
+                          <div class="[ hidden-xs col-md-12 ] p--0">
+                            <button class="[ button button--orange ] small w--100">Search for flights</button>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+                  </div>
+                  <!--Amend search -->
+
+                  <div class="mb--2 small">
+                    <a data-toggle="collapse" href="#stops" aria-expanded="false" aria-controls="stops" class="collapse--toggle collapsed link--clean">
+                  Stops
+                </a>
+                  </div>
+                  <div class="small collapse" id="stops">
+                    <div class="mb--2">
+                      <div class="mb--1">
+                        <input type="checkbox" id="stops-none" checked="checked">
+                        <label for="stops-none">
+                  No stops 
+                  <div class="small pl--2">
+                    <strong>11 flights</strong> from <strong>£12</strong>
+                  </div>
+                </label>
+                      </div>
+                      <div class="mb--1">
+                        <input type="checkbox" id="stops-one" checked="checked">
+                        <label for="stops-one">
+                  1 stop
+                  <div class="small pl--2">
+                    <strong>11 flights</strong> from <strong>£12</strong>
+                  </div>
+                </label>
+                      </div>
+                      <div class="mb--1">
+                        <input type="checkbox" id="stops-two" checked="checked">
+                        <label for="stops-two">
+                  2+ stops 
+                  <div class="small pl--2">
+                    <strong>11 flights</strong> from <strong>£12</strong>
+                  </div>
+                </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- stops -->
+
+                  <div class="mb--2 small">
+                    <a data-toggle="collapse" href="#departure-times" aria-expanded="false" aria-controls="departure-times" class="collapse--toggle collapsed link--clean">
+                Departure times
+            </a>
+                  </div>
+                  <div class="small collapse" id="departure-times">
+                    <div class="mb--2">
+                      <div class="mb--2 date-range">
+                        <label for "time-range__outbound">Outbound</label>
+                        <input type="range" id="time-range__outbound" min="00:00" max="23:59" step="1" class="d--none">
+                        <div class="small">
+                          <span id="outbound-value-lower"></span> - <span id="outbound-value-upper"></span>
+                        </div>
+                        <div id="js-slider-handles__outbound" class="[ noUi-target noUi-ltr noUi-horizontal ] mt--2">
+                        </div>
+                      </div>
+                      <div class="date-range">
+                        <label for "time-range__outbound">Return</label>
+                        <input type="range" id="time-range__outbound" min="00:00" max="23:59" step="1" class="d--none">
+                        <div class="small">
+                          <span id="return-value-lower"></span> - <span id="return-value-upper"></span>
+                        </div>
+                        <div id="js-slider-handles__return" class="[ noUi-target noUi-ltr noUi-horizontal ] mt--2">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Departure times -->
+
+                  <div class="mb--2 small">
+                    <a data-toggle="collapse" href="#journey-duration" aria-expanded="false" aria-controls="journey-duration" class="collapse--toggle collapsed link--clean">
+                Journey duration
+              </a>
+                  </div>
+                  <div class="small collapse" id="journey-duration">
+                    <div class="mb--2 date-range">
+                      <label for "journey-duration">Outbound</label>
+                      <input type="range" id="journey-duration" min="00:00" max="23:59" step="1" class="d--none">
+                      <div class="small">
+                        <span id="duration-value-lower"></span>
+                      </div>
+                      <div id="js-slider-handles__duration" class="[ noUi-target noUi-ltr noUi-horizontal ] mt--2">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Journey duration -->
+
+                  <div class="small mb--2">
+                    <a data-toggle="collapse" href="#airlines" aria-expanded="false" aria-controls="airlines" class="collapse--toggle collapsed link--clean">
+                    Airlines
+                  </a>
+                  </div>
+                  <div class="small collapse" id="airlines">
+                    <div class="mb--1">
+                      <input type="checkbox" id="air-berlin" checked="checked">
+                      <label for="air-berlin">
+                  Air Berlin
+                  <div class="small pl--2">
+                    <strong>£12</strong>
+                  </div>
+                </label>
+                    </div>
+                    <div class="mb--1">
+                      <input type="checkbox" id="air-berlin" checked="checked">
+                      <label for="air-berlin">
+                  Air Asia
+                  <div class="small pl--2">
+                    <strong>£17</strong>
+                  </div>
+                </label>
+                    </div>
+                    <div class="mb--1">
+                      <input type="checkbox" id="air-berlin" checked="checked">
+                      <label for="air-berlin">
+                  easyJet
+                  <div class="small pl--2">
+                    <strong>£100</strong>
+                  </div>
+                </label>
+                    </div>
+                    <!-- Airlines -->
+
+                  </div>
+                </div>
+                <div class="text--center [ button button--outline ] small col-xs-12" data-toggle="modal" data-target=".modal--filter">
+                  Confirm
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+      </div>
+  </section>
+
+  <footer class="background--dark-grey footer">
+    <div class="container">
+      <div class="row">
+        <div class="[ text--center text--white small ] [ pb--3 pt--3 ] col-md-12">
+          <div class="mb--3">
+            <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--white.svg">
+          </div>
+          <ul class="list--none list--inline">
+            <li>
+              <a href="#" class="text--white">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="text--white">Contact Us</a>
+            </li>
+            <li>
+              <a href="#" class="text--white">Booking Conditions</a>
+            </li>
+            <li>
+              <a href="#" class="text--white">Privacy Policy</a>
+            </li>
+          </ul>
+          <p>OneStepBooking.com is a trading name of BF Aviation Ltd, a limited company incorporated in England and Wales under
+            registration number 08615973, whose registered office is at 16 Beaufort Court, Admirals Way, Docklands, London,
+            E14 9XL.</p>
+          <div class="copyright">
+            © OneStepBooking.com All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      // Slick slider - Used for logo slider
+
+      $('.regular').slick({
+        arrows: false,
+        centerMode: true,
+        centerPadding: '54px',
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 6,
+      });
+
+      // Date popout calendar
+
+      $('.date-popout')
+        .datepicker({
+          autoclose: true,
+          format: 'dd/mm/yyyy'
+        })
+
+      // Sliding checkbox on/off switch
+
+      $('.onoffswitch-checkbox')
+        .click(function () {
+          $('.search--return').toggleClass('inactive');
+        })
+
+      // Dynamic customer age select menu
+
+      $('#js-passenger-18--wrapper').hide();
+      $('#passenger-18').on('change', function () {
+        $('#js-passenger-18--wrapper').show();
+        $('#js-passenger-18--age').empty();
+        $.each(new Array(+this.value), function () {
+          $('<div />', {
+              html: '<div class="[ mb--1 p--0 ] col-xs-12"><label class="[ p--0 mt--1 ] small col-xs-4 col-sm-5">Age</label><select name="child-age" class="small col-xs-8 col-sm-7 button--outline"><option value="Age">Age</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option></select></div>'
+            })
+            .appendTo('#js-passenger-18--age').hide().slideDown(100);
+        });
+      });
+      $(".js-passenger--button").click(function () {
+        $(".form-dropdown--fields").slideUp(100);
+      });
+
+      // Form passenger dropdown toggle
+
+      $(".form-dropdown--fields").hide();
+      $(".form-dropdown--toggle").click(function () {
+        $(".form-dropdown--fields").slideToggle(100);
+      });
+      // Awesomeplete airport list
+
+      // Flight from
+
+      var input = document.getElementById("flight-from");
+      new Awesomplete(input, {
+        list: ["London Gatwick (LGW)", "London Stansted (STN)", "London Heathrow (LHR)", "Dublin (DUB)",
+          "Madrid (MAD)", "Barcelona (BCN)", "Berlin (BER)"
+        ]
+      });
+
+      // Flight to
+      var input = document.getElementById("flight-to");
+      new Awesomplete(input, {
+        list: ["London Gatwick (LGW)", "London Stansted (STN)", "London Heathrow (LHR)", "Dublin (DUB)",
+          "Madrid (MAD)", "Barcelona (BCN)", "Berlin (BER)"
+        ]
+      });
+
+      //Dropdown plugin data
+      var ddData = [{
+          text: "<span class='flag-icon flag-icon-us'></span> USD",
+          value: 1,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-gb'></span> GBP",
+          value: 2,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-au'></span> AUD",
+          value: 3,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-us'></span> USD",
+          value: 4,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-gb'></span> GBP",
+          value: 5,
+          selected: false,
+        },
+        {
+          text: "<span class='flag-icon flag-icon-au'></span> AUD",
+          value: 6,
+          selected: false,
+        }
+      ];
+
+      $('#currency').ddslick({
+        data: ddData,
+      });
+
+      $('#currency').mouseenter(function (event) {
+        $('body').css('overflow', 'hidden');
+      }).mouseleave(function (event) {
+        $('body').css('overflow', '');
+      });
+
+      // Range slider 
+
+      var snapSlider = document.getElementById('js-slider-handles__outbound');
+
+      leftValue = document.getElementById('outbound-value-lower'),
+        rightValue = document.getElementById('outbound-value-upper');
+
+      // 0 = initial minutes from start of day
+      // 1440 = maximum minutes in a day
+      // step: 30 = amount of minutes to step by. 
+      var initialStartMinute = 0,
+        initialEndMinute = 1440,
+        step = 30;
+
+      slider = noUiSlider.create(snapSlider, {
+        start: [initialStartMinute, initialEndMinute],
+        connect: true,
+        step: step,
+        range: {
+          'min': initialStartMinute,
+          'max': initialEndMinute
+        }
+      });
+
+      var convertValuesToTime = function (values, handle) {
+        var hours = 0,
+          minutes = 0;
+
+        if (handle === 0) {
+          hours = convertToHour(values[0]);
+          minutes = convertToMinute(values[0], hours);
+          leftValue.innerHTML = formatHoursAndMinutes(hours, minutes);
+          return;
+        };
+
+        hours = convertToHour(values[1]);
+        minutes = convertToMinute(values[1], hours);
+        rightValue.innerHTML = formatHoursAndMinutes(hours, minutes);
+
+      };
+
+      var convertToHour = function (value) {
+        return Math.floor(value / 60);
+      };
+      var convertToMinute = function (value, hour) {
+        return value - hour * 60;
+      };
+      var formatHoursAndMinutes = function (hours, minutes) {
+        if (hours.toString().length == 1) hours = '0' + hours;
+        if (minutes.toString().length == 1) minutes = '0' + minutes;
+        return hours + ':' + minutes;
+      };
+
+      slider.on('update', function (values, handle) {
+        convertValuesToTime(values, handle);
+      });
+
+      // Collapse search filter bar on mobile
+
+      $(window).bind("resize load", function () {
+        if ($(this).width() < 767) {
+          $(".filter--toggle").removeClass("in");
+          $(".filter--toggle").addClass("out");
+        } else {
+          $(".filter--toggle").removeClass("out");
+          $(".filter--toggle").addClass("in");
+        }
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+.modal-open {
+    overflow: hidden;
+    .modal--terms {
+        .modal {
+            background-color: rgba(0, 0, 0, .75);
+        }
+    }
+}
+
+.modal--terms {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+
+    .modal-content {
+        @media all and (min-width: 768px) {
+            -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            background-color: $white;
+            padding: 1rem;
+        }
+    }
+    @media (min-width:768px) {
+        .modal-dialog {
+            width: 40rem;
+            margin: 2rem auto;
+        }
+        .modal-sm {
+            width: 300px
+        }
+    }
+}
+
+/*.modal-content {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5)
+}*/
+
+/*@media (min-width:768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto
+    }
+    .modal-sm {
+        width: 300px
+    }
+}
+
+@media (min-width:992px) {
+    .modal-lg {
+        width: 900px
+    }
+}
+*/
+
+.close {
+    background: $orange;
+    border-radius: 100%;
+    color: $white;
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transform: translate(50%, -50%);
+    width: 2rem;
+}
+
+.close:focus,
+.close:hover {
+    cursor: pointer;
+    background-color: $dark-grey;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.search--modal {
+
+    .modal-content {
+        position: relative;
+        @media all and (max-width: 768px) {
+            background-color: $white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            margin: calc(#{$base-rem__desktop}*1.5) 2.5% 0;
+            outline: 0;
+            padding: $base-rem__desktop;
+            position: relative;
+            width: 95%;
+        }
+        @media all and (min-width: 1024px) {
+            padding: 0;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+    @media all and (max-width: 768px) {
+        background-color: rgba(0, 0, 0, .75);
+        bottom: 0;
+        display: none;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        outline: 0;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        z-index: 1050;
+    }
+}
+
+.search--modal.fade .modal-dialog {
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    -o-transform: translate(0, -25%);
+    transform: translate(0, -25%)
+}
+
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0)
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-backdrop {
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1040;
+}
+
+.modal-backdrop.fade {
+    filter: alpha(opacity=0);
+    opacity: 0
+}
+
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .5
+}
+
+.modal-body {
+    position: relative;
+}
+
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll
+}

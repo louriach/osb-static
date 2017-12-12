@@ -1,0 +1,321 @@
+@import "_awesomeplete";
+input,
+select,
+textarea,
+.button {
+  border-radius: 3px;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=date],
+select {
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: none;
+  height: calc(#{$base-unit}*4);
+  line-height: 1.953rem;
+  padding: 0 9px;
+  transition: box-shadow ease .3s;
+  &.input--border {
+    border: 1px solid $mid-grey;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.input--focus:focus {
+  box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.36);
+}
+
+.button {
+  border: 2px solid transparent;
+  height: calc(#{$base-unit__desktop}*2);
+  line-height: 2;
+  @media all and (min-width: 768px) {
+    line-height: 1.3;
+  }
+  padding: .3rem .5rem;
+  &:hover {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.button--orange {
+  background-color: $orange;
+  color: $white;
+  &:hover {
+    background-color: darken( $orange, 10%);
+    color: $white;
+  }
+}
+
+.button--green {
+  background-color: $green;
+  color: $white;
+  &:hover {
+    background-color: darken( $green, 10%);
+    color: $white;
+  }
+}
+
+.button--outline {
+  border-color: $dark-grey;
+  color: inherit;
+  &.inactive {
+    border-color: $mid-grey;
+    color: $mid-grey;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &:not(.inactive):hover {
+    background-color: $mid-grey;
+  }
+  &.active {
+    border-color: $orange;
+    color: $orange;
+    &:hover {
+      background-color: transparent;
+      border-color: $orange;
+      color: $orange;
+      cursor: default;
+    }
+  }
+}
+
+.button--plain {
+  &:hover {
+    border-color: $mid-grey;
+  }
+}
+
+.alert {
+  border-left: 2px solid;
+  border-radius: 3px;
+}
+
+.alert-danger {
+  background-color: $red-light;
+  border-left: 2px solid $red;
+  color: $red;
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  select {
+    border: 1px solid $red;
+  }
+}
+
+.alert-warning {
+  background-color: $yellow;
+  border-left: 2px solid $yellow-dark;
+  color: $yellow-dark;
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  select {
+    border: 1px solid $yellow-dark;
+  }
+}
+
+.search-form--lg {
+  @media all and (max-width: 414px) {
+    [class*="col-"] {
+      padding: 0 calc(#{$base-rem}/2);
+    }
+    .search--departure,
+    .search--return {
+      width: 39%;
+    }
+    .search--return-check {
+      width: 22%;
+    }
+  }
+}
+
+.icon-wrap {
+  position: relative;
+  &:before {
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    content: "";
+    height: $base-rem__desktop;
+    left: $base-rem;
+    opacity: .5;
+    position: absolute;
+    top: $base-rem;
+    width: $base-rem__desktop;
+    z-index: 1;
+  }
+  input[type=text], .button {
+    padding-left: calc(#{$base-rem__desktop}*2);
+  }
+}
+
+.icon-wrap--plane {
+  &:before {
+    background-image: url(https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--plane.svg);
+  }
+}
+
+.icon-wrap--calendar {
+  &:before {
+    background-image: url(https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--calendar.svg);
+  }
+}
+
+.icon-wrap--user {
+  &:before {
+    background-image: url(https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--user.svg);
+  }
+}
+
+.form-wrap {
+  padding: 0;
+  @media all and (min-width: 768px) {
+    &:nth-of-type(odd) {
+      padding-left: 0;
+      padding-right: $base-rem;
+    }
+    &:nth-of-type(even) {
+      padding-left: $base-rem;
+      padding-right: 0;
+    }
+  }
+}
+
+.form--loader {
+  animation: opacity-loader 3s;
+}
+
+@keyframes opacity-loader {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Return date switcher */
+
+.search--return {
+  transition: all ease .3s;
+  &.inactive {
+    opacity: .5;
+  }
+}
+
+
+/* Checkbox sliders */
+
+.onoffswitch {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  width: 100%;
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  line-height: calc(#{$base-rem__desktop}*2);
+  overflow: hidden;
+}
+
+.onoffswitch-inner {
+  display: block;
+  margin-left: -100%; // transition: margin 0.3s ease-in 0s;
+  width: 200%;
+}
+
+.onoffswitch-inner {
+  &:before,
+  &:after {
+    background-color: $white;
+    color: $white;
+    display: block;
+    float: left;
+    height: calc(#{$base-rem__desktop}*2);
+    width: 50%;
+  }
+  &:after {
+    color: $mid-grey;
+    content: "No";
+    padding-right: $base-rem;
+    text-align: right;
+  }
+  &:before {
+    color: $dark-grey;
+    content: "Yes";
+    padding-left: $base-rem;
+  }
+  &.input--border {
+    &:before,
+    &:after {
+      border: 1px solid $mid-grey;
+    }
+  }
+}
+
+.onoffswitch-switch {
+  background: $mid-grey;
+  bottom: 0;
+  border-radius: $base-rem__desktop;
+  display: block;
+  margin: $base-rem;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease-in 0s;
+  width: $base-rem__desktop;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+  background-color: $green;
+  right: 0px;
+}
+
+.sidebar-search {
+  @media all and (min-width: 1366px) {
+    padding-right: calc(#{$base-rem__desktop}*2);
+  }
+}
+
+
+/* Form dropdown toggle */
+
+.form-dropdown--wrapper {
+  position: relative;
+}
+
+.form-dropdown--fields {
+  background-color: $white;
+  border-radius: 3px;
+  box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.36);
+  left: 0;
+  position: absolute;
+  top: calc(#{$base-rem__desktop}*2.5);
+  width: 100%;
+  z-index: 1;
+}

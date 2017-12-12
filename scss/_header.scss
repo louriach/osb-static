@@ -1,0 +1,171 @@
+@import "_currency-dropdown";
+
+.navbar {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  @media all and (max-width: 1023px) {
+    background-color: $white;
+    position: fixed;
+  }
+}
+
+.header--trim {
+  /*background-color: rgba($blue, .75);*/
+  background-color: $blue;
+  background-image: linear-gradient(-180deg, $blue-light 0%, $blue 100%);
+  padding: calc(#{$base-rem__desktop}*5) 0 $base-rem__desktop;
+  margin-bottom: calc(#{$base-rem__desktop}*2);
+  text-align: center;
+}
+
+.menu-list {
+  .dropdown-menu {
+    @media only screen and (max-width: 1023px) {
+      display: block;
+      box-shadow: none;
+      position: static;
+      width: 100%;
+    }
+    @media all and (min-width: 1024px) {
+      font-size: .8rem;
+      padding: calc(#{$base-rem}*2);
+    }
+  }
+  .dropdown-toggle {
+    @media only screen and (max-width: 1023px) {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  @media all and (min-width: 1024px) {
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.nav__item {
+  color: $blue;
+  line-height: calc(#{$base-rem}*4);
+  @media all and (max-width: 1023px) {
+    border-top: 1px solid $mid-grey;
+    display: block;
+    margin-top: $base-rem;
+    padding-top: $base-rem;
+  }
+  @media all and (min-width: 1024px) {
+    color: $white;
+    font-size: .8rem;
+    line-height: calc(#{$base-rem__desktop}*4);
+    margin-left: calc(#{$base-rem__desktop}*2);
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
+.navbar-header {
+  @media all and (max-width: 1023px) {
+    align-items: center;
+    height: calc(#{$base-rem__desktop}*3);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.navbar-brand {
+  position: relative;
+  @media all and (max-width: 1023px) {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .logo {
+    background: url("https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--blue.svg") 0 0 no-repeat transparent;
+    background-size: contain;
+    height: 16px;
+    @media all and (min-width: 768px) {
+      height: 21px;
+    }
+    @media all and (min-width: 1024px) {
+      left: 0;
+      position: absolute;
+      top: calc(#{$base-rem__desktop}*1.5);
+      width: 191px;
+    }
+    text-indent: -9999px;
+    @media all and (min-width: 1024px) {
+      background-image: url("https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--white.svg");
+    }
+  }
+}
+
+.navbar-collapse {
+  -webkit-overflow-scrolling: touch;
+  @media all and (max-width: 1023px) {
+    background-color: $white;
+  }
+  @media (min-width: 1024px) {
+    &.collapse {
+      display: block !important;
+      height: auto !important;
+      padding: 0 calc(#{$base-rem__desktop}*6) 0 0;
+      overflow: visible !important;
+      text-align: right;
+    }
+    &.in {
+      overflow-y: visible;
+    }
+  }
+}
+
+.navbar-toggle {
+  background-color: transparent;
+  &:after {
+    content: "Close";
+    position: relative;
+  }
+  &.collapsed {
+    &:after {
+      content: "Menu";
+    }
+  }
+  &:focus {
+    background-color: transparent;
+  }
+  @media all and (min-width: 1024px) {
+    display: none !important;
+  }
+}
+
+.navbar-collapse.collapse.in {
+  background-color: $white;
+}
+
+.collapse {
+  display: none
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+  -o-transition-duration: .35s;
+  transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+  -o-transition-property: height, visibility;
+  transition-property: height, visibility
+}
+
+.collapse.in {
+  display: block;
+}
