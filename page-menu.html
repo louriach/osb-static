@@ -1,0 +1,49 @@
+<style>
+    .page-menu-wrapper {
+        background-color: black;
+        bottom: 0;
+        font-size: 11px;
+        margin: 0;
+        opacity: .3;
+        padding: .5rem;
+        position: fixed;
+        transition: ease all .3s;
+        z-index: 1;
+    }
+    .page-menu-wrapper:hover {
+        opacity: 1;
+    }
+    .page-menu {
+        list-style: none;
+    }
+    .page-menu a {
+        color: white;
+        display: block;
+        margin-top: .5rem;
+    }
+    .page-menu-trigger:hover {
+        cursor: pointer;
+    }
+</style>
+<div class="page-menu-wrapper">
+    <div class="page-menu-trigger">Pages</div>
+    <ul class="page-menu">
+        <li><a href="index.html">Home page</a></li>
+        <li><a href="landing.html">Landing page</a></li>
+        <li><a href="loading.html">Loading screen</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="checkout-complete.html">Checkout complete</a></li>
+        <li><a href="booking-conditions.html">Booking conditions</a></li>
+        <li><a href="search-results.html">Search results</a></li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function() {
+        $(".page-menu").hide();
+        $('.page-menu-trigger').click(function(){
+            $(".page-menu").slideToggle();
+        });
+    });
+</script>
