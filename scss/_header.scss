@@ -1,4 +1,5 @@
 @import "_currency-dropdown";
+@import "_modal";
 
 .navbar {
   left: 0;
@@ -168,4 +169,18 @@
 
 .collapse.in {
   display: block;
+}
+
+/* Currency */
+
+.currency {
+  color: $white;
+  cursor: pointer;
+  font-size: .8rem;
+  height: calc(#{$base-rem__desktop}*4);
+  padding: calc(#{$base-rem__desktop}*1.5) $base-rem__desktop calc(#{$base-rem__desktop}*1.5) $base-rem;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
 }

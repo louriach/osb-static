@@ -12,6 +12,7 @@ $flag-icon-square-path: '/1x1' !default;
 
 .flag-icon {
   @extend .flag-icon-background;
+  border: 1px solid $white;
   border-radius: 100%;
   height: $base-rem__desktop;
   position: relative;

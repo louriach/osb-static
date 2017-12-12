@@ -21,11 +21,13 @@
   <!-- Include awesomeplete autocomlete plugin for airports -->
   <script src="https://leaverou.github.io/awesomplete/awesomplete.js"></script>
   <!-- Currency dropdown -->
-  <script type="text/javascript" src="js/currency-dropdown.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
 </head>
 
 <body>
+  
+  <div id="page-menu"></div>      
+       
   <header class="header">
     <nav class="[ relative z--1 ] navbar">
       <div class="container">
@@ -34,7 +36,80 @@
             <a href="#" class="d--inline-block logo">
                 OneStepBooking.com
               </a>
-            <div id="currency"></div>
+            <span class="currency" data-toggle="modal" data-target=".modal--overlay"><span class="link--border"><span class="flag-icon flag-icon-us"></span> USD</span></span>
+            
+            <div class="modal fade modal--overlay" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  <form>
+                    <fieldset class="currency-dropdown">
+                      <div class="modal-header text--center">
+                          <legend>Change your currency</legend>
+                        </div>
+                        <div class="currency__overflow">
+                          <div class="currency__wrapper">
+                            <input type="radio" name="match" id="match_1" value="" checked> 
+                            <label for="match_1" class="p--1">
+                                <span class="flag-icon flag-icon-us"></span> USD
+                            </label> 
+                          </div>
+                          
+                          <div class="currency__wrapper">
+                            <input type="radio" name="match" id="match_2" value=""> 
+                            <label for="match_2" class="p--1">
+                                <span class="flag-icon flag-icon-gb"></span> GBP
+                            </label> 
+                          </div>
+                          
+                          <div class="currency__wrapper"> 
+                            <input type="radio" name="match" id="match_3" value=""> 
+                            <label for="match_3" class="p--1">
+                                <span class="flag-icon flag-icon-au"></span> AUD
+                            </label> 
+                          </div>
+                          
+                          <div class="currency__wrapper">
+                            <input type="radio" name="match" id="match_4" value=""> 
+                            <label for="match_4" class="p--1">
+                                <span class="flag-icon flag-icon-eu"></span> EUR
+                            </label> 
+                          </div>
+                          <div class="currency__wrapper">
+                              <input type="radio" name="match" id="match_5" value=""> 
+                              <label for="match_5" class="p--1">
+                                  <span class="flag-icon flag-icon-ma"></span> MAD
+                              </label> 
+                            </div>
+                            <div class="currency__wrapper">
+                                <input type="radio" name="match" id="match_6" value=""> 
+                                <label for="match_6" class="p--1">
+                                    <span class="flag-icon flag-icon-ca"></span> CAD
+                                </label> 
+                            </div>  
+                            <div class="currency__wrapper">
+                                <input type="radio" name="match" id="match_7" value=""> 
+                                <label for="match_7" class="p--1">
+                                    <span class="flag-icon flag-icon-th"></span> THB
+                                </label> 
+                            </div>  
+                            <div class="currency__wrapper">
+                                <input type="radio" name="match" id="match_8" value=""> 
+                                <label for="match_8" class="p--1">
+                                    <span class="flag-icon flag-icon-eg"></span> EGP
+                                </label> 
+                            </div>  
+                          </div>                      
+                      </fieldset>
+                    </form>
+                    <div class="modal-footer text--center">
+                        <button type="button" class="[ button button--orange ]">Select currency</button>
+                    </div>
+                </div>
+              </div>
+            </div>            
           </div>
           <button type="button" class="[ button button--outline ] navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
             aria-expanded="false" aria-controls="navbar">
@@ -650,51 +725,14 @@
         ]
       });
 
-      //Dropdown plugin data
-      var ddData = [{
-          text: "<span class='flag-icon flag-icon-us'></span> USD",
-          value: 1,
-          selected: false,
-        },
-        {
-          text: "<span class='flag-icon flag-icon-gb'></span> GBP",
-          value: 2,
-          selected: false,
-        },
-        {
-          text: "<span class='flag-icon flag-icon-au'></span> AUD",
-          value: 3,
-          selected: false,
-        },
-        {
-          text: "<span class='flag-icon flag-icon-us'></span> USD",
-          value: 4,
-          selected: false,
-        },
-        {
-          text: "<span class='flag-icon flag-icon-gb'></span> GBP",
-          value: 5,
-          selected: false,
-        },
-        {
-          text: "<span class='flag-icon flag-icon-au'></span> AUD",
-          value: 6,
-          selected: false,
-        }
-      ];
-
-      $('#currency').ddslick({
-        data: ddData,
-      });
-
-      $('#currency').mouseenter(function (event) {
-        $('body').css('overflow', 'hidden');
-      }).mouseleave(function (event) {
-        $('body').css('overflow', '');
-      });
-
     });
   </script>
+
+<script>
+$(document).ready(function() {
+  $('#page-menu').load('page-menu.html');
+});
+</script>
 
 </body>
 
