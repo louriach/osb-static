@@ -24,6 +24,11 @@ select {
   &:focus {
     outline: none;
   }
+  &.error {
+    &::placeholder {
+      color: red;
+    }
+  }
 }
 
 .input--focus:focus {
@@ -33,7 +38,7 @@ select {
 .button {
   border: 2px solid transparent;
   height: calc(#{$base-unit__desktop}*2);
-  line-height: 2;
+  line-height: 1;
   @media all and (min-width: 768px) {
     line-height: 1.3;
   }

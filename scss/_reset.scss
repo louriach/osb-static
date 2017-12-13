@@ -60,11 +60,11 @@ strong, .bold {
 }
 
 small, .small {
-  font-size: .8em;
+  font-size: .8rem;
 }
 
 .large {
-  font-size: 1.953em;
+  font-size: 1.953rem;
 }
 
 sub, sup {
@@ -265,7 +265,7 @@ td, th {
 }
 
 html {
-  font-size: $base-rem;
+  font-size: calc(#{$base-rem__desktop}*.9);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @media all and (min-width: 768px) {
     font-size: $base-rem__desktop;
@@ -274,7 +274,7 @@ html {
 
 body {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: calc(#{$base-rem}*1.5);
+  font-size: calc(#{$base-rem__desktop}*.9);
   line-height: 1.5;
   color: $dark-grey;
   background-color: $white;

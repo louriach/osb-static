@@ -82,8 +82,8 @@
 .navbar-brand {
   position: relative;
   @media all and (max-width: 1023px) {
-    display: flex;
     align-items: center;
+    display: flex;
     height: 100%;
   }
   .logo {
@@ -174,13 +174,26 @@
 /* Currency */
 
 .currency {
-  color: $white;
+  color: $blue;
   cursor: pointer;
-  font-size: .8rem;
   height: calc(#{$base-rem__desktop}*4);
   padding: calc(#{$base-rem__desktop}*1.5) $base-rem__desktop calc(#{$base-rem__desktop}*1.5) $base-rem;
-  position: absolute;
-  right: 0;
   text-transform: uppercase;
-  top: 0;
+  .link--border {
+    &:hover {
+      color: $blue;
+    }
+  }
+  @media all and (min-width: 1024px) {
+    color: $white;
+    font-size: .8rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    .link--border {
+      &:hover {
+        color: $white;
+      }
+    }
+  }
 }

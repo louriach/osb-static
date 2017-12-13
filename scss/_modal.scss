@@ -37,9 +37,7 @@
         -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
         box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
         background-color: $white;
-        margin: 2rem auto;
         padding: 1rem;
-        width: 95%;
     }
     @media (min-width:768px) {
         .modal-dialog {
@@ -56,14 +54,17 @@
     border-radius: 100%;
     color: $white;
     display: block;
-    height: 2rem;
-    line-height: 2rem;
+    line-height: 1.5;
     position: absolute;
     right: 0;
     text-align: center;
     top: 0;
     transform: translate(50%, -50%);
-    width: 2rem;
+    @media all and (min-width: 768px) {
+        height: 2rem;
+        line-height: 1;
+        width: 2rem;
+    }
 }
 
 .close:focus,
@@ -126,7 +127,11 @@
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
-    transform: translate(0, 0)
+    transform: translate(0, 0);
+    margin: 2rem;
+    @media all and (min-width: 600px) {
+        margin: 2rem auto;
+    }
 }
 
 .modal-open .modal {
