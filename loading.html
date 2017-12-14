@@ -7,8 +7,11 @@
     <meta name="author" content="">
     <title>OneStepBooking.com</title>
     <link href="css/global.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </head>
   <body class="background--blue">
+      <div id="page-menu"></div>
+      
     <section class="vh--100">
         <div class="container">
             <div class="row">
@@ -33,5 +36,13 @@
             </div>   
         </div>
     </section>
+
+
+<script>
+    $(document).ready(function () {
+      $("#page-menu").load("page-menu.html");
+    });
+  </script>
+
   </body>
 </html>
