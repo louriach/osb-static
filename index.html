@@ -24,128 +24,131 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
 </head>
 
-<body>
+<body>    
   
-  <div id="page-menu"></div>      
-       
   <header class="header">
-    <nav class="[ relative z--1 ] navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <div class="navbar-brand">
-            <a href="#" class="d--inline-block logo">
-                OneStepBooking.com
-              </a>
-            <span class="currency" data-toggle="modal" data-target=".modal--overlay"><span class="link--border"><span class="flag-icon flag-icon-us"></span> USD</span></span>
-            
-            <div class="modal fade modal--overlay" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
-              <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                  <form>
-                    <fieldset class="currency-dropdown">
-                      <div class="modal-header text--center">
-                          <legend>Change your currency</legend>
-                        </div>
-                        <div class="currency__overflow">
-                          <div class="currency__wrapper">
-                            <input type="radio" name="match" id="match_1" value="" checked> 
-                            <label for="match_1" class="p--1">
-                                <span class="flag-icon flag-icon-us"></span> USD
-                            </label> 
+      <nav class="[ relative z--1 ] navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <div class="navbar-brand">
+              <a href="#" class="d--inline-block logo">
+                  OneStepBooking.com
+                </a>
+              <span class="currency" data-toggle="modal" data-target=".modal--overlay">
+                <span class="link--border">
+                  <span class="[ flag-icon flag-icon-us ]"></span> USD
+                </span>
+              </span>
+              
+              <div class="modal fade modal--overlay" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    <form>
+                      <fieldset class="currency-dropdown">
+                        <div class="modal-header text--center">
+                            <legend>Change your currency</legend>
                           </div>
-                          
-                          <div class="currency__wrapper">
-                            <input type="radio" name="match" id="match_2" value=""> 
-                            <label for="match_2" class="p--1">
-                                <span class="flag-icon flag-icon-gb"></span> GBP
-                            </label> 
-                          </div>
-                          
-                          <div class="currency__wrapper"> 
-                            <input type="radio" name="match" id="match_3" value=""> 
-                            <label for="match_3" class="p--1">
-                                <span class="flag-icon flag-icon-au"></span> AUD
-                            </label> 
-                          </div>
-                          
-                          <div class="currency__wrapper">
-                            <input type="radio" name="match" id="match_4" value=""> 
-                            <label for="match_4" class="p--1">
-                                <span class="flag-icon flag-icon-eu"></span> EUR
-                            </label> 
-                          </div>
-                          <div class="currency__wrapper">
-                              <input type="radio" name="match" id="match_5" value=""> 
-                              <label for="match_5" class="p--1">
-                                  <span class="flag-icon flag-icon-ma"></span> MAD
+                          <div class="currency__overflow">
+                            <div class="currency__wrapper">
+                              <input type="radio" name="match" id="match_1" value="" checked> 
+                              <label for="match_1" class="p--1">
+                                  <span class="flag-icon flag-icon-us"></span> USD
+                              </label> 
+                            </div>
+                            
+                            <div class="currency__wrapper">
+                              <input type="radio" name="match" id="match_2" value=""> 
+                              <label for="match_2" class="p--1">
+                                  <span class="flag-icon flag-icon-gb"></span> GBP
+                              </label> 
+                            </div>
+                            
+                            <div class="currency__wrapper"> 
+                              <input type="radio" name="match" id="match_3" value=""> 
+                              <label for="match_3" class="p--1">
+                                  <span class="flag-icon flag-icon-au"></span> AUD
+                              </label> 
+                            </div>
+                            
+                            <div class="currency__wrapper">
+                              <input type="radio" name="match" id="match_4" value=""> 
+                              <label for="match_4" class="p--1">
+                                  <span class="flag-icon flag-icon-eu"></span> EUR
                               </label> 
                             </div>
                             <div class="currency__wrapper">
-                                <input type="radio" name="match" id="match_6" value=""> 
-                                <label for="match_6" class="p--1">
-                                    <span class="flag-icon flag-icon-ca"></span> CAD
+                                <input type="radio" name="match" id="match_5" value=""> 
+                                <label for="match_5" class="p--1">
+                                    <span class="flag-icon flag-icon-ma"></span> MAD
                                 </label> 
-                            </div>  
-                            <div class="currency__wrapper">
-                                <input type="radio" name="match" id="match_7" value=""> 
-                                <label for="match_7" class="p--1">
-                                    <span class="flag-icon flag-icon-th"></span> THB
-                                </label> 
-                            </div>  
-                            <div class="currency__wrapper">
-                                <input type="radio" name="match" id="match_8" value=""> 
-                                <label for="match_8" class="p--1">
-                                    <span class="flag-icon flag-icon-eg"></span> EGP
-                                </label> 
-                            </div>  
-                          </div>                      
-                      </fieldset>
-                    </form>
-                    <div class="modal-footer text--center">
-                        <button type="button" class="[ button button--orange ]">Select currency</button>
-                    </div>
+                              </div>
+                              <div class="currency__wrapper">
+                                  <input type="radio" name="match" id="match_6" value=""> 
+                                  <label for="match_6" class="p--1">
+                                      <span class="flag-icon flag-icon-ca"></span> CAD
+                                  </label> 
+                              </div>  
+                              <div class="currency__wrapper">
+                                  <input type="radio" name="match" id="match_7" value=""> 
+                                  <label for="match_7" class="p--1">
+                                      <span class="flag-icon flag-icon-th"></span> THB
+                                  </label> 
+                              </div>  
+                              <div class="currency__wrapper">
+                                  <input type="radio" name="match" id="match_8" value=""> 
+                                  <label for="match_8" class="p--1">
+                                      <span class="flag-icon flag-icon-eg"></span> EGP
+                                  </label> 
+                              </div>  
+                            </div>                      
+                        </fieldset>
+                      </form>
+                      <div class="modal-footer text--center">
+                          <button type="button" class="[ button button--orange ]">Select currency</button>
+                      </div>
+                  </div>
                 </div>
-              </div>
-            </div>            
+              </div>            
+            </div>
+            <button type="button" class="[ button button--outline ] small navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+              aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
           </div>
-          <button type="button" class="[ button button--outline ] navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-            aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-          </button>
+          <div id="navbar" class="[ navbar-collapse collapse ]">
+            <ul class="list--none menu-list">
+              <li>
+                <a href="#" class="text--uppercase link__border link__border link__border nav__item">Our airlines</a>
+              </li>
+              <li>
+                <a href="#" class="text--uppercase link__border nav__item">Get in touch</a>
+              </li>
+              <li>
+                <a href="#" class="text--uppercase link__border link__border nav__item">About us</a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="text--uppercase relative link__border nav__item dropdown-toggle" data-toggle="dropdown" role="button"
+                  aria-haspopup="true" aria-expanded="false">
+                    Your booking
+                  </a>
+                <ul class="list--none [ dropdown-menu pull-right ] background--white">
+                  <li>
+                    <a href="#" class="text--uppercase [ pb--1 pt--1 ]">Action</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text--uppercase [ pb--1 pt--1 ]">Another action</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="navbar" class="[ navbar-collapse collapse ]">
-          <ul class="list--none menu-list">
-            <li>
-              <a href="#" class="text--uppercase link__border link__border link__border nav__item">Our airlines</a>
-            </li>
-            <li>
-              <a href="#" class="text--uppercase link__border nav__item">Get in touch</a>
-            </li>
-            <li>
-              <a href="#" class="text--uppercase link__border link__border nav__item">About us</a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="text--uppercase relative link__border nav__item dropdown-toggle" data-toggle="dropdown" role="button"
-                aria-haspopup="true" aria-expanded="false">
-                  Your booking
-                </a>
-              <ul class="list--none [ dropdown-menu pull-right ] background--white">
-                <li>
-                  <a href="#" class="text--uppercase [ pb--1 pt--1 ]">Action</a>
-                </li>
-                <li>
-                  <a href="#" class="text--uppercase [ pb--1 pt--1 ]">Another action</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
+  
   <section class="clearfix relative hero">
     <div class="container">
       <div class="row">
@@ -166,7 +169,7 @@
                 </div>
               </div>
               <div class="[ col-xs-5 col-sm-3 col-md-3 ] mb--3 search--departure">
-                <label class="d--block text--white mb--1" for="flight-departure"><span class="hidden-md">Date</span> Departing</label>
+                <label class="d--block text--white mb--1" for="flight-departure"><span class="hidden-xs">Date</span> Departing</label>
                 <div class="icon-wrap icon-wrap--calendar">
                   <input type="text" id="flight-departure" name="flight-departure" placeholder="Date" value="08/09/17" class="input--focus date-popout col-xs-12">
                 </div>
@@ -182,7 +185,7 @@
                 </div>
               </div>
               <div class="[ col-xs-5 col-sm-3 col-md-3 ] mb--3 search--return">
-                <label class="d--block text--white mb--1" for="flight-return"><span class="hidden-md">Date</span> Returning</label>
+                <label class="d--block text--white mb--1" for="flight-return"><span class="hidden-xs">Date</span> Returning</label>
                 <div class="icon-wrap icon-wrap--calendar">
                   <input type="text" id="flight-return" name="flight-return" placeholder="Date" value="11/09/17" class="input--focus date-popout col-xs-12">
                 </div>
@@ -622,37 +625,7 @@
       </div>
   </section>
 
-  <footer class="background--dark-grey footer">
-      <div class="container">
-        <div class="row">
-          <div class="[ text--center text--white small ] [ pb--3 pt--3 ] col-md-12">
-            <div class="mb--3">
-              <img src="https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--white.svg">
-            </div>
-            <ul class="list--none list--inline">
-              <li>
-                <a href="#" class="text--white">About Us</a>
-              </li>
-              <li>
-                <a href="#" class="text--white">Contact Us</a>
-              </li>
-              <li>
-                <a href="#" class="text--white">Booking Conditions</a>
-              </li>
-              <li>
-                <a href="#" class="text--white">Privacy Policy</a>
-              </li>
-            </ul>
-            <p>OneStepBooking.com is a trading name of BF Aviation Ltd, a limited company incorporated in England and Wales under
-              registration number 08615973, whose registered office is at 16 Beaufort Court, Admirals Way, Docklands, London,
-              E14 9XL.</p>
-            <div class="copyright">
-              © OneStepBooking.com All Rights Reserved.
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+  <div id="include--footer"></div>
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -727,12 +700,6 @@
 
     });
   </script>
-
-<script>
-$(document).ready(function() {
-  $('#page-menu').load('page-menu.html');
-});
-</script>
 
 </body>
 
