@@ -421,49 +421,6 @@
         ]
       });
 
-      //Dropdown plugin data
-      var ddData = [{
-          text: "<span class='flag-icon flag-icon-us'></span> USD",
-          value: 1,
-          selected: false,
-        },
-        {
-          text: "<span class='flag-icon flag-icon-gb'></span> GBP",
-          value: 2,
-          selected: false,
-        },
-        {
-          text: "<span class='flag-icon flag-icon-au'></span> AUD",
-          value: 3,
-          selected: false,
-        },
-        {
-          text: "<span class='flag-icon flag-icon-us'></span> USD",
-          value: 4,
-          selected: false,
-        },
-        {
-          text: "<span class='flag-icon flag-icon-gb'></span> GBP",
-          value: 5,
-          selected: false,
-        },
-        {
-          text: "<span class='flag-icon flag-icon-au'></span> AUD",
-          value: 6,
-          selected: false,
-        }
-      ];
-
-      $('#currency').ddslick({
-        data: ddData,
-      });
-
-      $('#currency').mouseenter(function (event) {
-        $('body').css('overflow', 'hidden');
-      }).mouseleave(function (event) {
-        $('body').css('overflow', '');
-      });
-
       // Range slider 
 
       var snapSlider = document.getElementById('js-slider-handles__outbound');
