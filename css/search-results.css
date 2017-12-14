@@ -2400,7 +2400,7 @@ ol ol {
 
 .centered {
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
   top: 50%; }
 
 .d--block {
@@ -2730,6 +2730,23 @@ a :hover {
 .open > .dropdown-menu {
   display: block; }
 
+/* Plane loader */
+.loader--plane {
+  animation: loader_plane 5s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: 0; }
+
+@keyframes loader_plane {
+  0% {
+    opacity: 0;
+    left: 0; }
+  50% {
+    opacity: 1; }
+  75% {
+    opacity: 0; }
+  100% {
+    left: 100%; } }
 .currency__overflow {
   overflow-x: scroll;
   max-height: 15rem; }
@@ -3394,6 +3411,12 @@ select {
   top: calc(18px*2.5);
   width: 100%;
   z-index: 1; }
+
+/* Calendar */
+.datepicker table {
+  width: 100%; }
+.datepicker td {
+  padding: .5rem .75rem !important; }
 
 .footer a:hover {
   color: #fff; }

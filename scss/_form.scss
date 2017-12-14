@@ -323,3 +323,14 @@ select {
   width: 100%;
   z-index: 1;
 }
+
+/* Calendar */
+
+.datepicker {
+  table {
+    width: 100%;
+  }
+  td {
+    padding: .5rem .75rem !important;
+  }
+}
