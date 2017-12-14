@@ -30,6 +30,7 @@
 </head>
 
 <body class="search">
+    <div id="page-menu"></div>
     <header class="header header--trim">
         <nav class="[ relative z--1 ] navbar">
           <div class="container">
@@ -397,6 +398,11 @@
         }
       });
 
+    });
+  </script>
+<script>
+    $(document).ready(function () {
+      $("#page-menu").load("page-menu.html");
     });
   </script>
 
