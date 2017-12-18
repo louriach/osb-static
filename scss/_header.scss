@@ -90,6 +90,9 @@
     background: url("https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--blue.svg") 0 0 no-repeat transparent;
     background-size: contain;
     height: 16px;
+    @media all and (max-width: 480px) {
+      width: 134px;
+    }
     @media all and (min-width: 768px) {
       height: 21px;
     }
