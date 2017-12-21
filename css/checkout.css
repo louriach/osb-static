@@ -3288,6 +3288,11 @@ select {
   .search-form--lg .search--return-check {
     width: 22%; } }
 
+.search-form--logo {
+  background-color: #fff;
+  padding: 9px;
+  border-radius: 18px; }
+
 .icon-wrap {
   position: relative; }
   .icon-wrap:before {

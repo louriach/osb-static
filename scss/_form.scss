@@ -142,6 +142,12 @@ select {
   }
 }
 
+.search-form--logo {
+  background-color: $white;
+  padding: $base-rem;
+  border-radius: $base-rem__desktop;
+}
+
 .icon-wrap {
   position: relative;
   &:before {
