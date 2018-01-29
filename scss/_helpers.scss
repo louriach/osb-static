@@ -549,6 +549,33 @@ a {
   display: block;
 }
 
+/* Generic loader */
+
+.loader--fixed {
+  animation-name: loader_fixed;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  background-color: $white;
+  box-shadow: 0 2px $base-rem rgba(0,0,0,$base-rem);
+  height: $base-rem; 
+  left: 0;
+  position: fixed;
+  top: 0;
+}
+
+@keyframes loader_fixed {
+  0% {
+    width: $base-rem;
+  }
+  75% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 /* Plane loader */
 
 .loader--plane {

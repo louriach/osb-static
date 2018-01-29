@@ -2734,6 +2734,26 @@ a :hover {
 .open > .dropdown-menu {
   display: block; }
 
+/* Generic loader */
+.loader--fixed {
+  animation-name: loader_fixed;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  background-color: #fff;
+  box-shadow: 0 2px 9px black;
+  height: 9px;
+  left: 0;
+  position: fixed;
+  top: 0; }
+
+@keyframes loader_fixed {
+  0% {
+    width: 9px; }
+  75% {
+    width: 100%; }
+  100% {
+    width: 100%; } }
 /* Plane loader */
 .loader--plane {
   animation: loader_plane 5s;
