@@ -2962,6 +2962,10 @@ a :hover {
   border-top: 1px solid #CBCBCB;
   padding: 18px 18px 0; }
 
+/* Loading overlay */
+.loading-overlay {
+  display: block; }
+
 .navbar {
   left: 0;
   position: absolute;
@@ -3769,6 +3773,10 @@ a.search-result:hover {
 .modal-footer {
   border-top: 1px solid #CBCBCB;
   padding: 18px 18px 0; }
+
+/* Loading overlay */
+.loading-overlay {
+  display: block; }
 
 .collapse--toggle {
   background: url(https://louriach.github.io/styles-osb/public/images/onestepbooking__asset--minus.svg) no-repeat 0 0 transparent;

@@ -2962,6 +2962,10 @@ a :hover {
   border-top: 1px solid #CBCBCB;
   padding: 18px 18px 0; }
 
+/* Loading overlay */
+.loading-overlay {
+  display: block; }
+
 .navbar {
   left: 0;
   position: absolute;

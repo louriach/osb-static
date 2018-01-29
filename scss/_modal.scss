@@ -180,3 +180,8 @@
     border-top: 1px solid $mid-grey;
     padding: $base-rem__desktop $base-rem__desktop 0;
 }
+
+/* Loading overlay */
+.loading-overlay {
+    display: block; 
+}

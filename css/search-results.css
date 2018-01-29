@@ -2962,6 +2962,10 @@ a :hover {
   border-top: 1px solid #CBCBCB;
   padding: 18px 18px 0; }
 
+/* Loading overlay */
+.loading-overlay {
+  display: block; }
+
 .navbar {
   left: 0;
   position: absolute;
@@ -3760,6 +3764,10 @@ a.search-result:hover {
 .modal-footer {
   border-top: 1px solid #CBCBCB;
   padding: 18px 18px 0; }
+
+/* Loading overlay */
+.loading-overlay {
+  display: block; }
 
 /*! nouislider - 10.0.0 - 2017-05-28 14:52:48 */
 /* Functional styling;
