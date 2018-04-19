@@ -2338,6 +2338,18 @@ p:last-child {
 .text--center {
   text-align: center; }
 
+@media all and (min-width: 768px) {
+  .text--left--l {
+    text-align: left; } }
+
+@media all and (min-width: 768px) {
+  .text--right--l {
+    text-align: right; } }
+
+@media all and (min-width: 768px) {
+  .text--center--l {
+    text-align: center; } }
+
 .text--justify {
   text-align: justify; }
 

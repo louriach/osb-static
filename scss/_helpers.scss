@@ -31,6 +31,24 @@
   text-align: center;
 }
 
+.text--left--l {
+  @media all and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.text--right--l {
+  @media all and (min-width: 768px) {
+    text-align: right;
+  }
+}
+
+.text--center--l {
+  @media all and (min-width: 768px) {
+    text-align: center;
+  }
+}
+
 .text--justify {
   text-align: justify;
 }
@@ -161,7 +179,6 @@ ol ol {
 .z--0 {
   z-index: -1;
 }
-
 
 /* Clearfix */
 
@@ -558,7 +575,7 @@ a {
   animation-timing-function: ease-in-out;
   background-color: $white;
   box-shadow: 0 2px $base-rem rgba(0,0,0,$base-rem);
-  height: $base-rem; 
+  height: $base-rem;
   left: 0;
   position: fixed;
   top: 0;
@@ -583,7 +600,7 @@ a {
   animation-iteration-count:infinite;
   position: absolute;
   top: 0;
-} 
+}
 
 @keyframes loader_plane {
   0% {
