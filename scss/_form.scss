@@ -134,10 +134,18 @@ select {
     }
     .search--departure,
     .search--return {
-      width: 39%;
+      width: 38%;
+      .icon-wrap {
+        &:before {
+          display: none;
+        }
+      }
+      .icon-wrap input[type=text] {
+          padding-left: $base-rem;
+        }
     }
     .search--return-check {
-      width: 22%;
+      width: 24%;
     }
   }
 }
@@ -334,6 +342,7 @@ select {
 
 .datepicker {
   &.dropdown-menu {
+    font-size: 12px !important;
     min-width: 17.5rem !important;
   }
   table {

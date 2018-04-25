@@ -1360,6 +1360,10 @@ strong, .bold, .table--padded th, .table--padded .th {
 small, .small {
   font-size: .8rem; }
 
+@media all and (max-width: 480px) {
+  .small-xs {
+    font-size: .8rem; } }
+
 @media all and (min-width: 768px) {
   .small-ns {
     font-size: .8rem; } }
@@ -3323,9 +3327,15 @@ select {
     padding: 0 calc(9px/2); }
   .search-form--lg .search--departure,
   .search-form--lg .search--return {
-    width: 39%; }
+    width: 38%; }
+    .search-form--lg .search--departure .icon-wrap:before,
+    .search-form--lg .search--return .icon-wrap:before {
+      display: none; }
+    .search-form--lg .search--departure .icon-wrap input[type=text],
+    .search-form--lg .search--return .icon-wrap input[type=text] {
+      padding-left: 9px; }
   .search-form--lg .search--return-check {
-    width: 22%; } }
+    width: 24%; } }
 
 .search-form--logo {
   background-color: #fff;
@@ -3465,6 +3475,7 @@ select {
 
 /* Calendar */
 .datepicker.dropdown-menu {
+  font-size: 12px !important;
   min-width: 17.5rem !important; }
 .datepicker table {
   width: 100%; }
