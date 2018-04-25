@@ -3052,7 +3052,9 @@ a :hover {
     .navbar-brand {
       align-items: center;
       display: flex;
-      height: 100%; } }
+      height: 100%;
+      justify-content: space-between;
+      width: 100%; } }
   .navbar-brand .logo {
     background: url("https://louriach.github.io/styles-osb/public/images/onestepbooking__logo--blue.svg") 0 0 no-repeat transparent;
     background-size: contain;
@@ -3129,7 +3131,6 @@ a :hover {
 .currency {
   color: #005F9E;
   cursor: pointer;
-  height: calc(18px*4);
   padding: calc(18px*1.5) 18px calc(18px*1.5) 9px;
   text-transform: uppercase; }
   .currency .link--border:hover {
@@ -3485,6 +3486,18 @@ select {
   font-size: 1rem !important;
   padding: .75rem .75rem !important; }
 
+@media all and (max-width: 320px) {
+  .datepicker {
+    border-radius: 0;
+    padding: 0; }
+
+  .datepicker.dropdown-menu {
+    top: 4px !important;
+    left: 4px !important;
+    width: 314px; } }
+@media all and (max-width: 768px) {
+  .datepicker-dropdown:before, .datepicker-dropdown:after {
+    display: none; } }
 .footer a:hover {
   color: #fff; }
 
