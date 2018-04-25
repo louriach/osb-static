@@ -63,6 +63,12 @@ small, .small {
   font-size: .8rem;
 }
 
+.small-xs {
+  @media all and (max-width: 480px) {
+    font-size: .8rem;
+  } 
+}
+
 .small-ns {
   @media all and (min-width: 768px) {
     font-size: .8rem;
