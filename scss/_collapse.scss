@@ -16,11 +16,12 @@
         bottom: $base-rem;
         border-radius: 3px;
         color: $white;
+        display: block;
         left: $base-rem__desktop;
         padding: 1rem;
         position: fixed;
         right: $base-rem__desktop;
         text-align: center;
-        z-index: 2;
+        z-index: 10;
     }
 }

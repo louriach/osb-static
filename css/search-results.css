@@ -3651,12 +3651,13 @@ a.search-result:hover {
     bottom: 9px;
     border-radius: 3px;
     color: #fff;
+    display: block;
     left: 18px;
     padding: 1rem;
     position: fixed;
     right: 18px;
     text-align: center;
-    z-index: 2; } }
+    z-index: 10; } }
 
 .modal {
   background-color: rgba(43, 43, 43, 0.8);

@@ -3840,12 +3840,13 @@ a.search-result:hover {
     bottom: 9px;
     border-radius: 3px;
     color: #fff;
+    display: block;
     left: 18px;
     padding: 1rem;
     position: fixed;
     right: 18px;
     text-align: center;
-    z-index: 2; } }
+    z-index: 10; } }
 
 .table--padded th, .table--padded .th, .table--padded tr:nth-child(even), .table--padded .tr:nth-child(even) {
   background-color: #FBFBFB; }
