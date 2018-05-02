@@ -362,13 +362,15 @@ select {
     padding: 0;
   }
   .datepicker.dropdown-menu {
-    top: 4px !important;
+    position: fixed !important;
+    top: 50% !important;
+    transform: translateY(-50%);
     left: 4px !important;
     width: 314px;
   }
 }
 @media all and (max-width: 768px) {
   .datepicker-dropdown:before, .datepicker-dropdown:after {
-    display: none;
+    display: none !important;
   }
 }
